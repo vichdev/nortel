@@ -1,0 +1,52 @@
+.button__bar {
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto;
+  padding: 0;
+  border-radius: 40px;
+  width: 190px;
+  text-align: center;
+  transform: translateY(-50%);
+  transform: translateX(50%) ;
+  position: absolute;
+  top: 90%;
+  cursor: default;
+  left: 40%;
+}
+
+.button__bar li {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 10rem;;
+  margin: 0 3px;
+  padding: 0;
+}
+
+.button__bar li button {
+  border: none;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 7.5px;
+}
+
+.button__bar li.slick-active button {
+  background-color: white;
+}
+
+.button__bar li button:hover,
+.button__bar li button:focus {
+  background: white;
+  outline: 0;
+}
+
+.slick-slide img {
+  border: 5px solid #fff;
+  display: block;
+  margin: auto;
+}
