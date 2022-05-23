@@ -2,37 +2,34 @@ import React from "react";
 import Slider from "react-slick";
 import * as Styles from "./styles";
 import "./slick.css";
+import { ICarouselInfo } from "./interfaces/ICarouselInfo";
 
 const Carousel: React.FC = () => {
-  const imageList = [
-    "Carousel_img2",
-    "Carousel_img1",
-    "Carousel_img3",
-    "Carousel_img4",
+  const carouselInfo: ICarouselInfo[] = [
+    {
+      titulo: "Produtos Veterinarios",
+      texto: "Produtos veterinarios de qualidade para seu pet",
+      path: "Carousel_img1",
+    },
+    {
+      titulo: "Produtos de Hotelaria",
+      texto: "Produtos veterinarios de qualidade para seu pet",
+      path: "Carousel_img2",
+    },
+    {
+      titulo: "Produtos Amenities",
+      texto: "Produtos veterinarios de qualidade para seu pet",
+      path: "Carousel_img3",
+    },
+    {
+      titulo: "Produtos para seu Negócio",
+      texto: "Produtos veterinarios de qualidade para seu pet",
+      path: "Carousel_img4",
+    },
   ];
 
   const getImagePath = (image: string) => {
-    return (
-      <Styles.CarouselImgWrapper>
-        <Styles.CarouselTextWrapper>
-          <h1>Produtos Veterinários</h1>
-          <span>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </span>
-        </Styles.CarouselTextWrapper>
-        <Styles.CarouselImg
-          src={require(`../../assets/Carousel/${image}.jpg`)}
-        />
-      </Styles.CarouselImgWrapper>
-    );
+    return require(`../../assets/Carousel/${image}.jpg`);
   };
 
   const settings = {
@@ -51,9 +48,28 @@ const Carousel: React.FC = () => {
   return (
     <Styles.CarouselWrapper>
       <Slider {...settings}>
-        {imageList.map((img) => {
-          return getImagePath(img);
-        })}
+        {
+          carouselInfo.map((item: ICarouselInfo, index: number) => {
+            return (
+              <Styles.CarouselImgWrapper key={index}>
+                <Styles.CarouselContentWrapper>
+                  <Styles.CarouselTextWrapper>
+                    <Styles.CaroulselTitle>{item.titulo}</Styles.CaroulselTitle>
+                    <Styles.CarouselText>{item.texto}</Styles.CarouselText>
+                    <Styles.CarouselButton>Saiba Mais</Styles.CarouselButton>
+                  </Styles.CarouselTextWrapper>
+                </Styles.CarouselContentWrapper>
+                <Styles.CarouselImg src={getImagePath(item.path)} />;
+              </Styles.CarouselImgWrapper>
+            );
+          })
+
+          /* {imageList.map((img) => {
+          return (
+            
+          );
+        })} */
+        }
       </Slider>
     </Styles.CarouselWrapper>
   );

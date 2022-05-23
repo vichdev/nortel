@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GlobalStyles } from "./styles/globalStyles";
 import Carousel from "./components/Carousel/Carousel";
+import Banner from "./components/Banner/Banner";
+import Footer from "./components/Footer/Footer";
 
 const App: React.FC = () => {
   return (
@@ -11,6 +13,8 @@ const App: React.FC = () => {
       <GlobalStyles />
       <Header />
       <Carousel />
+      <Banner />
+      <Footer />
     </>
   );
 };

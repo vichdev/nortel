@@ -4,14 +4,15 @@
   margin: auto;
   padding: 0;
   border-radius: 40px;
-  width: 190px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  transform: translateY(-50%);
-  transform: translateX(50%) ;
   position: absolute;
   top: 90%;
   cursor: default;
-  left: 40%;
+  background-color: transparent;
 }
 
 .button__bar li {
@@ -39,14 +40,13 @@
   background-color: white;
 }
 
-.button__bar li button:hover,
-.button__bar li button:focus {
+.button__bar li button:hover {
   background: white;
   outline: 0;
+  outline-color: white;
+}
+.button__bar li.slick-active button:focus {
+  background-color: white;
 }
 
-.slick-slide img {
-  border: 5px solid #fff;
-  display: block;
-  margin: auto;
-}
+
