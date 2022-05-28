@@ -1,5 +1,25 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { RiArrowDropRightLine } from "react-icons/ri";
 
+//Icons
+export const DropdownMenuIcon = styled(RiArrowDropRightLine)`
+  color: #000;
+  position: absolute;
+`;
+
+//Animations
+
+const MenuIconFade = keyframes`
+0% {width: 0%}
+100% {width: 13%}
+`;
+
+const DropdownMenuAnimation = keyframes`
+0% {height: 0rem; }
+100% {height: 8rem; }
+`;
+
+//Header
 export const HeaderWrapper = styled.div<{ isScrolled?: Boolean }>`
   width: 100%;
   position: fixed;
@@ -8,7 +28,7 @@ export const HeaderWrapper = styled.div<{ isScrolled?: Boolean }>`
     props.isScrolled ? "0px 0px 20px 0px" : "10px 0px 10px 0px"};
   height: ${(props) => (props.isScrolled ? "5rem" : "7rem")};
   background-color: ${(props) => (props.isScrolled ? "black" : "transparent")};
-  transition: 0.5s;
+  transition: 0.6s;
 `;
 
 export const Header = styled.header<{ isScrolled?: Boolean }>`
@@ -23,9 +43,11 @@ export const Header = styled.header<{ isScrolled?: Boolean }>`
   position: fixed;
   left: 0;
   right: 0;
+  top: 0;
   transition: 0.5s;
 `;
 
+//NavBar
 export const NavBarWrapper = styled.div`
   display: flex;
   width: 100%;
@@ -34,14 +56,64 @@ export const NavBarWrapper = styled.div`
   text-align: center;
 `;
 
+export const DropdownContainer = styled.div<{ isScrolled?: Boolean }>`
+  width: 100%;
+  max-width: 10rem;
+  height: 8rem;
+  z-index: 3000;
+  align-items: center;
+  display: none;
+  padding: 0.5rem;
+  flex-direction: column;
+  position: absolute;
+  top: ${(props) => (props.isScrolled ? "4rem" : "5rem")};
+  justify-content: space-around;
+  background-color: #fff;
+  transition: ${DropdownMenuAnimation} 0.7s ease-in-out;
+  animation-name: ${DropdownMenuAnimation};
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+`;
+
+export const DropdownText = styled.a`
+  color: var(--black);
+`;
+
+export const DropdownList = styled.div`
+  width: 100%;
+  align-items: center;
+  display: flex;
+  transition: 0.5s ease-in-out;
+  ${DropdownMenuIcon} {
+    position: relative;
+    display: none;
+    transition: 3s ease;
+    animation-name: ${MenuIconFade};
+    animation-duration: 0.5s;
+  }
+  &:hover {
+    ${DropdownMenuIcon} {
+      visibility: visible;
+      display: flex;
+    }
+  }
+`;
+
 export const NavBar = styled.div`
   width: 100%;
-  max-width: 10%;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
   white-space: nowrap;
   text-align: center;
+  align-items: center;
   color: var(--background);
+  display: flex;
+  padding: 1rem;
+  &:hover {
+    ${DropdownContainer} {
+      display: flex;
+    }
+  }
 `;
 
 export const NavBarLink = styled.a`

@@ -47,7 +47,8 @@ textarea {
   font: 400 18px Roboto, sans-serif;
 }
 button,
-svg {
+svg,
+a {
   cursor: pointer;
 }
 `;

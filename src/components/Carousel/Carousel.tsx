@@ -3,31 +3,9 @@ import Slider from "react-slick";
 import * as Styles from "./styles";
 import "./slick.css";
 import { ICarouselInfo } from "./interfaces/ICarouselInfo";
+import { carouselInfo } from "./resources/carouselInfo";
 
 const Carousel: React.FC = () => {
-  const carouselInfo: ICarouselInfo[] = [
-    {
-      titulo: "Produtos Veterinarios",
-      texto: "Produtos veterinarios de qualidade para seu pet",
-      path: "Carousel_img1",
-    },
-    {
-      titulo: "Produtos de Hotelaria",
-      texto: "Produtos veterinarios de qualidade para seu pet",
-      path: "Carousel_img2",
-    },
-    {
-      titulo: "Produtos Amenities",
-      texto: "Produtos veterinarios de qualidade para seu pet",
-      path: "Carousel_img3",
-    },
-    {
-      titulo: "Produtos para seu Negócio",
-      texto: "Produtos veterinarios de qualidade para seu pet",
-      path: "Carousel_img4",
-    },
-  ];
-
   const getImagePath = (image: string) => {
     return require(`../../assets/Carousel/${image}.jpg`);
   };
@@ -48,28 +26,20 @@ const Carousel: React.FC = () => {
   return (
     <Styles.CarouselWrapper>
       <Slider {...settings}>
-        {
-          carouselInfo.map((item: ICarouselInfo, index: number) => {
-            return (
-              <Styles.CarouselImgWrapper key={index}>
-                <Styles.CarouselContentWrapper>
-                  <Styles.CarouselTextWrapper>
-                    <Styles.CaroulselTitle>{item.titulo}</Styles.CaroulselTitle>
-                    <Styles.CarouselText>{item.texto}</Styles.CarouselText>
-                    <Styles.CarouselButton>Saiba Mais</Styles.CarouselButton>
-                  </Styles.CarouselTextWrapper>
-                </Styles.CarouselContentWrapper>
-                <Styles.CarouselImg src={getImagePath(item.path)} />;
-              </Styles.CarouselImgWrapper>
-            );
-          })
-
-          /* {imageList.map((img) => {
+        {carouselInfo.map((item: ICarouselInfo, index: number) => {
           return (
-            
+            <Styles.CarouselImgWrapper key={index}>
+              <Styles.CarouselContentWrapper>
+                <Styles.CarouselTextWrapper>
+                  <Styles.CaroulselTitle>{item.titulo}</Styles.CaroulselTitle>
+                  <Styles.CarouselText>{item.texto}</Styles.CarouselText>
+                  <Styles.CarouselButton>Saiba Mais</Styles.CarouselButton>
+                </Styles.CarouselTextWrapper>
+              </Styles.CarouselContentWrapper>
+              <Styles.CarouselImg src={getImagePath(item.path)} />;
+            </Styles.CarouselImgWrapper>
           );
-        })} */
-        }
+        })}
       </Slider>
     </Styles.CarouselWrapper>
   );
