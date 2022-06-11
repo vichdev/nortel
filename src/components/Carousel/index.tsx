@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import * as Styles from "./styles";
 import "./slick.css";
 import { ICarouselInfo } from "./interfaces/ICarouselInfo";
-import { carouselInfo } from "./resources/carouselInfo";
+import { carouselInfo } from "./data/carouselInfo";
 
 const Carousel: React.FC = () => {
   const getImagePath = (image: string) => {
@@ -33,10 +33,9 @@ const Carousel: React.FC = () => {
                 <Styles.CarouselTextWrapper>
                   <Styles.CaroulselTitle>{item.titulo}</Styles.CaroulselTitle>
                   <Styles.CarouselText>{item.texto}</Styles.CarouselText>
-                  <Styles.CarouselButton>Saiba Mais</Styles.CarouselButton>
                 </Styles.CarouselTextWrapper>
               </Styles.CarouselContentWrapper>
-              <Styles.CarouselImg src={getImagePath(item.path)} />;
+              <Styles.CarouselImg src={getImagePath(item.path)} />
             </Styles.CarouselImgWrapper>
           );
         })}

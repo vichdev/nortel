@@ -39,20 +39,6 @@ export const CarouselText = styled.span`
   font-weight: 700;
 `;
 
-export const CarouselButton = styled.button`
-  padding: 1rem;
-  width: 30%;
-  max-width: 10rem;
-  background-color: var(--green);
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  opacity: 1;
-  :hover {
-    filter: brightness(0.9);
-  }
-`;
-
 export const CarouselContentWrapper = styled.div`
   width: 100%;
   height: 100%;

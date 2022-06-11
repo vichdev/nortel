@@ -64,6 +64,7 @@ export const DropdownContainer = styled.div<{ isScrolled?: Boolean }>`
   align-items: center;
   display: none;
   padding: 0.5rem;
+  border-radius: 5px;
   flex-direction: column;
   position: absolute;
   top: ${(props) => (props.isScrolled ? "4rem" : "5rem")};
@@ -134,7 +135,7 @@ export const NavBarLink = styled.a`
   :hover:after {
     width: 100%;
   }
-  :hover {
+  &:hover {
     filter: brightness(1.1);
     opacity: 0.9;
   }
