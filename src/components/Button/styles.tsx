@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const Button = styled.button<{ bgColor?: string; color?: string }>`
   width: 100%;
   max-width: 10rem;
-  height: 20%;
-  background-color: transparent;
+  padding: 1rem;
+  background-color: ${(props) =>
+    props.bgColor ? props.bgColor : "transparent"};
   border-radius: 5px;
   border: 1px solid var(--green);
-  color: var(--green);
+  color: ${(props) => (props.color ? props.color : "var(--green)")};
   opacity: 1;
   transition: 0.2s ease-in-out;
   :hover {

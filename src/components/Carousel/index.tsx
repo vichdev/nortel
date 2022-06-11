@@ -34,7 +34,9 @@ const Carousel: React.FC = () => {
                 <Styles.CarouselTextWrapper>
                   <Styles.CaroulselTitle>{item.titulo}</Styles.CaroulselTitle>
                   <Styles.CarouselText>{item.texto}</Styles.CarouselText>
-                  <Button title="Saiba Mais" />
+                  <Styles.ButtonCarousel color="#fff" bgColor="var(--green)">
+                    Saiba Mais
+                  </Styles.ButtonCarousel>
                 </Styles.CarouselTextWrapper>
               </Styles.CarouselContentWrapper>
               <Styles.CarouselImg src={getImagePath(item.path)} />

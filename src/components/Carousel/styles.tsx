@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "../Button/styles";
 
 export const CarouselWrapper = styled.div`
   position: relative;
@@ -37,6 +38,12 @@ export const CarouselText = styled.span`
   font-size: 1rem;
   color: white;
   font-weight: 700;
+`;
+
+export const ButtonCarousel = styled(Button)`
+  &:hover {
+    filter: brightness(0.9);
+  }
 `;
 
 export const CarouselContentWrapper = styled.div`
