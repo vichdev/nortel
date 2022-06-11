@@ -4,6 +4,7 @@ import * as Styles from "./styles";
 import "./slick.css";
 import { ICarouselInfo } from "./interfaces/ICarouselInfo";
 import { carouselInfo } from "./data/carouselInfo";
+import Button from "../Button";
 
 const Carousel: React.FC = () => {
   const getImagePath = (image: string) => {
@@ -33,6 +34,7 @@ const Carousel: React.FC = () => {
                 <Styles.CarouselTextWrapper>
                   <Styles.CaroulselTitle>{item.titulo}</Styles.CaroulselTitle>
                   <Styles.CarouselText>{item.texto}</Styles.CarouselText>
+                  <Button title="Saiba Mais" />
                 </Styles.CarouselTextWrapper>
               </Styles.CarouselContentWrapper>
               <Styles.CarouselImg src={getImagePath(item.path)} />

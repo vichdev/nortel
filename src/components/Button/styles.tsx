@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  padding: 1rem;
-  width: 30%;
+  width: 100%;
   max-width: 10rem;
-  background-color: var(--green);
+  height: 20%;
+  background-color: transparent;
   border-radius: 5px;
-  border: none;
-  color: #fff;
+  border: 1px solid var(--green);
+  color: var(--green);
   opacity: 1;
+  transition: 0.2s ease-in-out;
   :hover {
-    filter: brightness(0.9);
+    background-color: var(--green);
+    color: white;
   }
 `;
