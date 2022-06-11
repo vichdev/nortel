@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button";
 import * as Styles from "./styles";
 
 const Banner: React.FC = () => {
@@ -6,19 +7,26 @@ const Banner: React.FC = () => {
     {
       title: "Veterinários",
       description: "O melhor produto para seu Pet.",
-      imagePath: "1_png",
+      alt: "Imagem de um produto veterinário representando a linha veterinária.",
+      imagePath: "productbanner_1.jpg",
     },
     {
       title: "Hotelaria",
       description: "O melhor produto para seu negócio.",
-      imagePath: "2_png",
+      alt: "Imagem de um produto para hotéis e negócios representando a linha de hotelaria.",
+      imagePath: "productbanner_2.jpg",
     },
     {
       title: "Fitoterápicos",
       description: "O melhor produto para você.",
-      imagePath: "3_png",
+      alt: "Imagem de um produto fitoterápico representando a linha fitoterápica.",
+      imagePath: "productbanner_3.jpg",
     },
   ];
+
+  const getImagePath = (image: string) => {
+    return require(`../../assets/ProductsBanner/${image}`);
+  };
 
   return (
     <Styles.SectionWrapper>
@@ -26,18 +34,29 @@ const Banner: React.FC = () => {
         <h1>Conheça nossos Produtos</h1>
         <span> Conheça todas as nossas opções.</span>
       </Styles.ProductsHeader>
-      <Styles.ProductsContainer>
-        {products.map((item, index) => {
-          return (
-            <div key={index}>
-              <img src="" alt="" />
-              <h1></h1>
-              <span></span>
-              <button></button>
-            </div>
-          );
-        })}
-      </Styles.ProductsContainer>
+      <Styles.SectionContainer>
+        <Styles.ProductsContainer>
+          {products.map((item, index) => {
+            return (
+              <Styles.Product key={index}>
+                <Styles.ProductImageWrapper>
+                  <Styles.ProductImage
+                    src={getImagePath(item.imagePath)}
+                    alt={item.alt}
+                  />
+                </Styles.ProductImageWrapper>
+                <Styles.ProductInfoWrapper>
+                  <Styles.ProductTitle>{item.title}</Styles.ProductTitle>
+                  <Styles.ProductDescription>
+                    {item.description}
+                  </Styles.ProductDescription>
+                </Styles.ProductInfoWrapper>
+                <Button title="Saiba Mais" />
+              </Styles.Product>
+            );
+          })}
+        </Styles.ProductsContainer>
+      </Styles.SectionContainer>
     </Styles.SectionWrapper>
   );
 };
