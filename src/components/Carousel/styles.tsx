@@ -9,6 +9,7 @@ export const CarouselImg = styled.img`
   width: 100%;
   height: 700px;
   object-fit: cover;
+  filter: brightness(0.7);
   position: relative;
 `;
 

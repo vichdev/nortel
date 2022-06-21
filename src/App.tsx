@@ -1,20 +1,25 @@
 import React from "react";
-import Header from "./components/Header";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GlobalStyles } from "./styles/globalStyles";
-import Carousel from "./components/Carousel";
-import Banner from "./components/BannerProdutos";
-import Footer from "./components/Footer";
+import { Routes, Route, Link } from "react-router-dom";
+
+import Home from "./views/Home";
+import Produtos from "./views/Produtos";
+import ProdutosVeterinarios from "./views/ProdutosVeterinarios";
 
 const App: React.FC = () => {
   return (
     <>
       <GlobalStyles />
-      <Header />
-      <Carousel />
-      <Banner />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/produtos" element={<Produtos />} />
+        <Route
+          path="/produtos/veterinarios"
+          element={<ProdutosVeterinarios />}
+        />
+      </Routes>
     </>
   );
 };

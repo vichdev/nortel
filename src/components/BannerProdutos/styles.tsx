@@ -34,7 +34,7 @@ export const Product = styled.div`
   background-color: white;
   justify-content: space-around;
   align-items: center;
-  height: 40rem;
+  height: 50rem;
 `;
 
 export const ProductInfoWrapper = styled.div`
@@ -46,7 +46,7 @@ export const ProductInfoWrapper = styled.div`
 export const ProductImageWrapper = styled.div`
   width: 100%;
   height: 100%;
-  max-height: 25rem;
+  max-height: 35rem;
 `;
 
 export const ProductImage = styled.img`

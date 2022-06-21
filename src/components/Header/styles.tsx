@@ -3,7 +3,7 @@ import { RiArrowDropRightLine } from "react-icons/ri";
 
 //Icons
 export const DropdownMenuIcon = styled(RiArrowDropRightLine)`
-  color: #000;
+  color: var(--yellow);
   position: absolute;
 `;
 
@@ -27,7 +27,7 @@ export const HeaderWrapper = styled.div<{ isScrolled?: Boolean }>`
   padding: ${(props) =>
     props.isScrolled ? "0px 0px 20px 0px" : "10px 0px 10px 0px"};
   height: ${(props) => (props.isScrolled ? "5rem" : "7rem")};
-  background-color: ${(props) => (props.isScrolled ? "black" : "transparent")};
+  background-color: ${(props) => (props.isScrolled ? "white" : "transparent")};
   transition: 0.6s;
 `;
 
@@ -37,7 +37,7 @@ export const Header = styled.header<{ isScrolled?: Boolean }>`
   width: 80%;
   margin: 0 auto;
   align-items: center;
-  background-color: ${(props) => (props.isScrolled ? "black" : "transparent")};
+  background-color: ${(props) => (props.isScrolled ? "white" : "transparent")};
   justify-content: space-between;
   z-index: 1000;
   position: fixed;
@@ -77,7 +77,7 @@ export const DropdownContainer = styled.div<{ isScrolled?: Boolean }>`
 `;
 
 export const DropdownText = styled.a`
-  color: var(--black);
+  color: var(--primary);
 `;
 
 export const DropdownList = styled.div`
@@ -107,7 +107,7 @@ export const NavBar = styled.div`
   white-space: nowrap;
   text-align: center;
   align-items: center;
-  color: var(--background);
+  color: var(--primary);
   display: flex;
   padding: 1rem;
   &:hover {
@@ -125,7 +125,7 @@ export const NavBarLink = styled.a`
   ::after {
     content: "";
     position: absolute;
-    background-color: var(--green);
+    background-color: var(--primary);
     height: 3px;
     width: 0;
     left: 0;
@@ -143,6 +143,7 @@ export const NavBarLink = styled.a`
 
 export const Logo = styled.img`
   width: 100%;
+  max-width: 15rem;
   height: 100%;
 `;
 
