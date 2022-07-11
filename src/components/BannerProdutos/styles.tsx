@@ -1,10 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { Button } from "../Button/styles";
+
+const ProductAnimation = keyframes`
+from {opacity: 0; left: -60px}
+to {opacity: 1; left: 0  }
+`;
 
 export const SectionWrapper = styled.div`
   width: 100vw;
   height: 100%;
   padding: 2rem;
-  background-color: #eeee;
+  background-color: #fff;
 `;
 
 export const SectionContainer = styled.div`
@@ -32,6 +38,9 @@ export const Product = styled.div`
   padding: 1rem;
   width: 25%;
   background-color: white;
+  animation-name: ${ProductAnimation};
+  animation-duration: 1.5s;
+  box-shadow: 2px 2px 15px 10px #eeee;
   justify-content: space-around;
   align-items: center;
   height: 50rem;
@@ -59,3 +68,7 @@ export const ProductImage = styled.img`
 export const ProductTitle = styled.h1``;
 
 export const ProductDescription = styled.span``;
+
+export const ProductsButton = styled(Button)`
+  max-width: 60%;
+`;

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Button = styled.button<{ bgColor?: string; color?: string }>`
   width: 100%;
-  max-width: 10rem;
   padding: 1rem;
   background-color: ${(props) =>
     props.bgColor ? props.bgColor : "transparent"};

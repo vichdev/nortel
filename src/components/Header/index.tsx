@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import * as Styles from "./styles";
 import logo from "../../assets/logonortel.png";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header: React.FC = () => {
-  const [shrink, setShrink] = useState<Boolean>(false);
+  const [shrink, setShrink] = useState<boolean>(false);
+  const location = useLocation();
 
   const changeBackgroundHeader = () => {
     if (window.scrollY >= 80) {
@@ -20,48 +21,113 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <Styles.HeaderWrapper isScrolled={shrink}>
-      <Styles.Header isScrolled={shrink}>
-        <Styles.LogoWrapper>
-          <Styles.Logo src={logo} alt="logo do site" />
-        </Styles.LogoWrapper>
-        <Styles.NavBarWrapper>
-          <Styles.NavBar>
-            <Styles.NavBarLink>Home</Styles.NavBarLink>
-          </Styles.NavBar>
-          <Styles.NavBar>
-            <Styles.NavBarLink>Sobre Nós</Styles.NavBarLink>
-          </Styles.NavBar>
-          <Styles.NavBar>
-            <Styles.NavBarLink>Produtos</Styles.NavBarLink>
-            <RiArrowDropDownLine />
-            <Styles.DropdownContainer isScrolled={shrink}>
-              <Styles.DropdownList>
-                <Styles.DropdownMenuIcon />
-                <Link to="/produtos/hotelaria">
-                  <Styles.DropdownText>Hotelaria</Styles.DropdownText>
+    <>
+      {location.pathname === "/" ? (
+        <Styles.HeaderWrapper isScrolled={shrink}>
+          <Styles.Header isScrolled={shrink}>
+            <Styles.LogoWrapper>
+              <Styles.Logo src={logo} alt="logo da empresa" />
+            </Styles.LogoWrapper>
+            <Styles.NavBarWrapper>
+              <Styles.NavBar>
+                <Styles.NavBarLink isScrolled={shrink}>Home</Styles.NavBarLink>
+              </Styles.NavBar>
+              <Styles.NavBar>
+                <Link to={"/about-us"} style={{ textDecoration: "none" }}>
+                  <Styles.NavBarLink isScrolled={shrink}>
+                    Sobre Nós
+                  </Styles.NavBarLink>
                 </Link>
-              </Styles.DropdownList>
-              <Styles.DropdownList>
-                <Styles.DropdownMenuIcon />
-                <Link to="/produtos/veterinarios">
-                  <Styles.DropdownText>Veterinários</Styles.DropdownText>
+              </Styles.NavBar>
+              <Styles.NavBar>
+                <Link to={"/produtos"}>
+                  <Styles.NavBarLink isScrolled={shrink}>
+                    Produtos
+                  </Styles.NavBarLink>
                 </Link>
-              </Styles.DropdownList>
-              <Styles.DropdownList>
-                <Styles.DropdownMenuIcon />
-                <Link to="/produtos/fitoterapicos">
-                  <Styles.DropdownText>Fitoterápicos</Styles.DropdownText>
+                <RiArrowDropDownLine />
+                <Styles.DropdownContainer isScrolled={shrink}>
+                  <Styles.DropdownList>
+                    <Styles.DropdownMenuIcon />
+                    <Link to="/produtos/hotelaria">
+                      <Styles.DropdownText>Hotelaria</Styles.DropdownText>
+                    </Link>
+                  </Styles.DropdownList>
+                  <Styles.DropdownList>
+                    <Styles.DropdownMenuIcon />
+                    <Link to="/produtos/veterinarios">
+                      <Styles.DropdownText>Veterinários</Styles.DropdownText>
+                    </Link>
+                  </Styles.DropdownList>
+                  <Styles.DropdownList>
+                    <Styles.DropdownMenuIcon />
+                    <Link to="/produtos/fitoterapicos">
+                      <Styles.DropdownText>Fitoterápicos</Styles.DropdownText>
+                    </Link>
+                  </Styles.DropdownList>
+                </Styles.DropdownContainer>
+              </Styles.NavBar>
+              <Styles.NavBar>
+                <Styles.NavBarLink isScrolled={shrink}>
+                  Contato
+                </Styles.NavBarLink>
+              </Styles.NavBar>
+            </Styles.NavBarWrapper>
+          </Styles.Header>
+        </Styles.HeaderWrapper>
+      ) : (
+        <Styles.HeaderWrapper isScrolled={true}>
+          <Styles.Header isScrolled={true}>
+            <Styles.LogoWrapper>
+              <Styles.Logo src={logo} alt="logo da empresa" />
+            </Styles.LogoWrapper>
+            <Styles.NavBarWrapper>
+              <Styles.NavBar>
+                <Styles.NavBarLink isScrolled={true}>Home</Styles.NavBarLink>
+              </Styles.NavBar>
+              <Styles.NavBar>
+                <Link to={"/about-us"} style={{ textDecoration: "none" }}>
+                  <Styles.NavBarLink isScrolled={true}>
+                    Sobre Nós
+                  </Styles.NavBarLink>
                 </Link>
-              </Styles.DropdownList>
-            </Styles.DropdownContainer>
-          </Styles.NavBar>
-          <Styles.NavBar>
-            <Styles.NavBarLink>Contato</Styles.NavBarLink>
-          </Styles.NavBar>
-        </Styles.NavBarWrapper>
-      </Styles.Header>
-    </Styles.HeaderWrapper>
+              </Styles.NavBar>
+              <Styles.NavBar>
+                <Link to={"/produtos"}>
+                  <Styles.NavBarLink isScrolled={true}>
+                    Produtos
+                  </Styles.NavBarLink>
+                </Link>
+                <RiArrowDropDownLine />
+                <Styles.DropdownContainer isScrolled={true}>
+                  <Styles.DropdownList>
+                    <Styles.DropdownMenuIcon />
+                    <Link to="/produtos/hotelaria">
+                      <Styles.DropdownText>Hotelaria</Styles.DropdownText>
+                    </Link>
+                  </Styles.DropdownList>
+                  <Styles.DropdownList>
+                    <Styles.DropdownMenuIcon />
+                    <Link to="/produtos/veterinarios">
+                      <Styles.DropdownText>Veterinários</Styles.DropdownText>
+                    </Link>
+                  </Styles.DropdownList>
+                  <Styles.DropdownList>
+                    <Styles.DropdownMenuIcon />
+                    <Link to="/produtos/fitoterapicos">
+                      <Styles.DropdownText>Fitoterápicos</Styles.DropdownText>
+                    </Link>
+                  </Styles.DropdownList>
+                </Styles.DropdownContainer>
+              </Styles.NavBar>
+              <Styles.NavBar>
+                <Styles.NavBarLink isScrolled={true}>Contato</Styles.NavBarLink>
+              </Styles.NavBar>
+            </Styles.NavBarWrapper>
+          </Styles.Header>
+        </Styles.HeaderWrapper>
+      )}
+    </>
   );
 };
 

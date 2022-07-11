@@ -1,5 +1,10 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Button } from "../Button/styles";
+
+const CarouselContentForwardAnimation = keyframes`
+from {opacity: 0; top: -100px}
+to {opacity: 1; top: 0}
+`;
 
 export const CarouselWrapper = styled.div`
   position: relative;
@@ -20,11 +25,17 @@ export const CarouselImgWrapper = styled.div`
 
 export const CarouselDots = styled.li``;
 
-export const CarouselTextWrapper = styled.div`
+export const CarouselTextWrapper = styled.div<{ handleAnimation: Boolean }>`
   display: flex;
   height: 30%;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
+  animation-name: ${(props) =>
+    props.handleAnimation !== undefined && props.handleAnimation
+      ? CarouselContentForwardAnimation
+      : ""};
+  animation-duration: 1s;
   align-items: center;
   transition: 0.5s;
 `;
@@ -42,6 +53,7 @@ export const CarouselText = styled.span`
 `;
 
 export const ButtonCarousel = styled(Button)`
+  max-width: 30%;
   &:hover {
     filter: brightness(0.9);
   }

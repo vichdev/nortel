@@ -34,7 +34,7 @@ ul {
   cursor: pointer;
 }
 body {
-  font-family: 400 14px Oswald, sans-serif;
+  font-family: 400 14px 'Montserrat', sans-serif;
   background: var(--background);
   overflow-x: hidden;
   @media (max-width: 1080px) {

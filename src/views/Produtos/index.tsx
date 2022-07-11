@@ -1,10 +1,20 @@
 import React from "react";
+import Header from "../../components/Header";
+import ScreenBanners from "../../components/ScreenBanners";
+import banner from "../../assets/banner_store.jpg";
+import * as Styles from "./styles";
 
 const Produtos: React.FC = () => {
   return (
-    <div>
-      <h1>PRODUTOS</h1>
-    </div>
+    <>
+      <Header />
+      <ScreenBanners
+        title="Produtos"
+        description="Conheça todas nossas opções para seu negócio!"
+        img={banner}
+      />
+      <Styles.ProductsWrapper></Styles.ProductsWrapper>
+    </>
   );
 };
 

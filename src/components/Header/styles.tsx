@@ -37,6 +37,7 @@ export const Header = styled.header<{ isScrolled?: Boolean }>`
   width: 80%;
   margin: 0 auto;
   align-items: center;
+  color: ${(props) => (props.isScrolled ? "#000" : "#fff")};
   background-color: ${(props) => (props.isScrolled ? "white" : "transparent")};
   justify-content: space-between;
   z-index: 1000;
@@ -91,6 +92,7 @@ export const DropdownList = styled.div`
     transition: 3s ease;
     animation-name: ${MenuIconFade};
     animation-duration: 0.5s;
+    animation-fill-mode: forwards;
   }
   &:hover {
     ${DropdownMenuIcon} {
@@ -100,14 +102,14 @@ export const DropdownList = styled.div`
   }
 `;
 
-export const NavBar = styled.div`
+export const NavBar = styled.div<{ isScrolled?: Boolean }>`
   width: 100%;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
   white-space: nowrap;
   text-align: center;
+  text-decoration: none;
   align-items: center;
-  color: var(--primary);
   display: flex;
   padding: 1rem;
   &:hover {
@@ -115,19 +117,35 @@ export const NavBar = styled.div`
       display: flex;
     }
   }
+  &:hover {
+    svg {
+      opacity: 1;
+    }
+  }
+  svg {
+    opacity: 0.5;
+    font-size: 1.5rem;
+  }
 `;
 
-export const NavBarLink = styled.a`
+export const NavBarLink = styled.a<{ isScrolled: Boolean }>`
   position: relative;
-  opacity: 1;
+  opacity: 0.7;
+  display: flex;
+
   cursor: pointer;
+  text-decoration: none;
+  color: ${(props) => (props.isScrolled ? "#000" : "#fff")};
 
   ::after {
     content: "";
     position: absolute;
-    background-color: var(--primary);
-    height: 3px;
+    background-color: var(--yellow);
+    height: 2px;
+    right: 0;
     width: 0;
+    margin: auto;
+    right: 0;
     left: 0;
     bottom: -7px;
     transition: 0.3s;
@@ -137,7 +155,7 @@ export const NavBarLink = styled.a`
   }
   &:hover {
     filter: brightness(1.1);
-    opacity: 0.9;
+    opacity: 1;
   }
 `;
 

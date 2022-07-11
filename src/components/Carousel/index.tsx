@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import * as Styles from "./styles";
 import "./slick.css";
 import { ICarouselInfo } from "./interfaces/ICarouselInfo";
 import { carouselInfo } from "./data/carouselInfo";
-import Button from "../Button";
 
 const Carousel: React.FC = () => {
+  const [animation, setAnimation] = useState<boolean>(false);
+
   const getImagePath = (image: string) => {
     return require(`../../assets/Carousel/${image}.jpg`);
+  };
+
+  const handleAnimation = () => {
+    setAnimation(!animation);
   };
 
   const settings = {
@@ -20,9 +25,11 @@ const Carousel: React.FC = () => {
     autoplay: true,
     fade: true,
     speed: 1000,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3500,
     cssEase: "linear",
     dotsClass: "button__bar",
+    // afterChange: () => handleAnimation(),
+    beforeChange: () => handleAnimation(),
   };
   return (
     <Styles.CarouselWrapper>
@@ -31,7 +38,7 @@ const Carousel: React.FC = () => {
           return (
             <Styles.CarouselImgWrapper key={index}>
               <Styles.CarouselContentWrapper>
-                <Styles.CarouselTextWrapper>
+                <Styles.CarouselTextWrapper handleAnimation={animation}>
                   <Styles.CaroulselTitle>{item.titulo}</Styles.CaroulselTitle>
                   <Styles.CarouselText>{item.texto}</Styles.CarouselText>
                   <Styles.ButtonCarousel color="#fff" bgColor="var(--yellow)">

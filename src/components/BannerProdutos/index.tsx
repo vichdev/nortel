@@ -2,8 +2,15 @@ import React from "react";
 import Button from "../Button";
 import * as Styles from "./styles";
 
+interface IProduto {
+  title: string;
+  description: string;
+  alt: string;
+  imagePath: string;
+}
+
 const Banner: React.FC = () => {
-  const products = [
+  const products: Array<IProduto> = [
     {
       title: "Veterinários",
       description: "O melhor produto para seu Pet.",
@@ -31,12 +38,12 @@ const Banner: React.FC = () => {
   return (
     <Styles.SectionWrapper>
       <Styles.ProductsHeader>
-        <h1>Conheça nossos Produtos</h1>
+        <h1>Conheça nossos produtos</h1>
         <span> Conheça todas as nossas opções.</span>
       </Styles.ProductsHeader>
       <Styles.SectionContainer>
         <Styles.ProductsContainer>
-          {products.map((item, index) => {
+          {products.map((item: IProduto, index: number) => {
             return (
               <Styles.Product key={index}>
                 <Styles.ProductImageWrapper>
@@ -51,7 +58,9 @@ const Banner: React.FC = () => {
                     {item.description}
                   </Styles.ProductDescription>
                 </Styles.ProductInfoWrapper>
-                <Button title="Saiba Mais" />
+                <Styles.ProductsButton title="Saiba Mais">
+                  Saiba Mais
+                </Styles.ProductsButton>
               </Styles.Product>
             );
           })}
