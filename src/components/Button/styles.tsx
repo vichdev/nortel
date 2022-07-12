@@ -6,12 +6,13 @@ export const Button = styled.button<{ bgColor?: string; color?: string }>`
   background-color: ${(props) =>
     props.bgColor ? props.bgColor : "transparent"};
   border-radius: 5px;
-  border: 1px solid var(--yellow);
-  color: ${(props) => (props.color ? props.color : "var(--yellow)")};
+  border: 1px solid var(--primary);
+  color: ${(props) => (props.color ? props.color : "var(--primary)")};
   opacity: 1;
+  font-size: 1rem;
   transition: 0.2s ease-in-out;
   :hover {
-    background-color: var(--yellow);
+    background-color: var(--primary);
     color: white;
   }
 `;

@@ -41,7 +41,7 @@ const Carousel: React.FC = () => {
                 <Styles.CarouselTextWrapper handleAnimation={animation}>
                   <Styles.CaroulselTitle>{item.titulo}</Styles.CaroulselTitle>
                   <Styles.CarouselText>{item.texto}</Styles.CarouselText>
-                  <Styles.ButtonCarousel color="#fff" bgColor="var(--yellow)">
+                  <Styles.ButtonCarousel color="#fff" bgColor="var(--primary)">
                     Saiba Mais
                   </Styles.ButtonCarousel>
                 </Styles.CarouselTextWrapper>

@@ -6,10 +6,9 @@ export const GlobalStyles = createGlobalStyle`
 :root {
   --background: #fff;
   --text: whitesmoke;
-  --primary: #974063;
-  --primary-red: #F54768;
-  --secondary: #41436A;
-  --yellow: #FF9677;
+  --primary: #345EAB;
+  --secondary: #3BBAC3;
+  --yellow: #EEDBCB;
   --text: #a39f9f;
   --black: #000;
   --green:  #8abc00;
@@ -34,8 +33,10 @@ ul {
   cursor: pointer;
 }
 body {
-  font-family: 400 14px 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: var(--background);
+  font-size: 16px;
+  font-weight: 400;
   overflow-x: hidden;
   @media (max-width: 1080px) {
     font-size: 93.75%;
@@ -47,11 +48,15 @@ body {
 input,
 button,
 textarea {
-  font: 400 18px Roboto, sans-serif;
+  font-family:  'Montserrat', sans-serif;
 }
 button,
 svg,
 a {
   cursor: pointer;
 }
-`;
+
+h1,h2,h3,h4,h5,h6,span {
+  font-family: 'Montserrat', sans-serif;
+}
+  `;

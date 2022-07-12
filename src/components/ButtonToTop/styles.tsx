@@ -7,7 +7,7 @@ to{opacity: 1; right: 1rem;}
 
 export const ButtonWrapper = styled.div<{ showButton: boolean }>`
   width: 50px;
-  background-color: var(--yellow);
+  background-color: var(--primary);
   color: #fff;
   height: 50px;
   border-radius: 9rem;

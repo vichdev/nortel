@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as Styles from "./styles";
-import logo from "../../assets/logonortel.png";
+import logo from "../../assets/nortel_logo_3.png";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { Link, useLocation } from "react-router-dom";
 
@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   const location = useLocation();
 
   const changeBackgroundHeader = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 150) {
       setShrink(true);
     } else {
       setShrink(false);
@@ -30,7 +30,11 @@ const Header: React.FC = () => {
             </Styles.LogoWrapper>
             <Styles.NavBarWrapper>
               <Styles.NavBar>
-                <Styles.NavBarLink isScrolled={shrink}>Home</Styles.NavBarLink>
+                <Link to="/">
+                  <Styles.NavBarLink isScrolled={shrink}>
+                    Home
+                  </Styles.NavBarLink>
+                </Link>
               </Styles.NavBar>
               <Styles.NavBar>
                 <Link to={"/about-us"} style={{ textDecoration: "none" }}>
@@ -83,7 +87,9 @@ const Header: React.FC = () => {
             </Styles.LogoWrapper>
             <Styles.NavBarWrapper>
               <Styles.NavBar>
-                <Styles.NavBarLink isScrolled={true}>Home</Styles.NavBarLink>
+                <Link to={"/"}>
+                  <Styles.NavBarLink isScrolled={true}>Home</Styles.NavBarLink>
+                </Link>
               </Styles.NavBar>
               <Styles.NavBar>
                 <Link to={"/about-us"} style={{ textDecoration: "none" }}>

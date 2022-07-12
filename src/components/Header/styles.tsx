@@ -3,7 +3,7 @@ import { RiArrowDropRightLine } from "react-icons/ri";
 
 //Icons
 export const DropdownMenuIcon = styled(RiArrowDropRightLine)`
-  color: var(--yellow);
+  color: var(--secondary);
   position: absolute;
 `;
 
@@ -26,14 +26,14 @@ export const HeaderWrapper = styled.div<{ isScrolled?: Boolean }>`
   z-index: 2000;
   padding: ${(props) =>
     props.isScrolled ? "0px 0px 20px 0px" : "10px 0px 10px 0px"};
-  height: ${(props) => (props.isScrolled ? "5rem" : "7rem")};
+  height: ${(props) => (props.isScrolled ? "6rem" : "8rem")};
   background-color: ${(props) => (props.isScrolled ? "white" : "transparent")};
   transition: 0.6s;
 `;
 
 export const Header = styled.header<{ isScrolled?: Boolean }>`
   display: flex;
-  height: ${(props) => (props.isScrolled ? "5rem" : "7rem")};
+  height: ${(props) => (props.isScrolled ? "6rem" : "8rem")};
   width: 80%;
   margin: 0 auto;
   align-items: center;
@@ -42,6 +42,7 @@ export const Header = styled.header<{ isScrolled?: Boolean }>`
   justify-content: space-between;
   z-index: 1000;
   position: fixed;
+  padding: 2rem;
   left: 0;
   right: 0;
   top: 0;
@@ -65,12 +66,11 @@ export const DropdownContainer = styled.div<{ isScrolled?: Boolean }>`
   align-items: center;
   display: none;
   padding: 0.5rem;
-  border-radius: 5px;
   flex-direction: column;
   position: absolute;
   top: ${(props) => (props.isScrolled ? "4rem" : "5rem")};
   justify-content: space-around;
-  background-color: #fff;
+  background-color: white;
   transition: ${DropdownMenuAnimation} 0.7s ease-in-out;
   animation-name: ${DropdownMenuAnimation};
   animation-duration: 0.6s;
@@ -78,7 +78,7 @@ export const DropdownContainer = styled.div<{ isScrolled?: Boolean }>`
 `;
 
 export const DropdownText = styled.a`
-  color: var(--primary);
+  color: black;
 `;
 
 export const DropdownList = styled.div`
@@ -132,7 +132,6 @@ export const NavBarLink = styled.a<{ isScrolled: Boolean }>`
   position: relative;
   opacity: 0.7;
   display: flex;
-
   cursor: pointer;
   text-decoration: none;
   color: ${(props) => (props.isScrolled ? "#000" : "#fff")};
@@ -140,7 +139,7 @@ export const NavBarLink = styled.a<{ isScrolled: Boolean }>`
   ::after {
     content: "";
     position: absolute;
-    background-color: var(--yellow);
+    background-color: var(--primary);
     height: 2px;
     right: 0;
     width: 0;
@@ -157,15 +156,17 @@ export const NavBarLink = styled.a<{ isScrolled: Boolean }>`
     filter: brightness(1.1);
     opacity: 1;
   }
+  svg {
+    color: red;
+  }
 `;
 
 export const Logo = styled.img`
   width: 100%;
-  max-width: 15rem;
   height: 100%;
 `;
 
 export const LogoWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  max-width: 5rem;
+  max-height: 5rem;
 `;

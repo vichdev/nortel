@@ -33,3 +33,7 @@ export const BannerImg = styled.img`
   object-fit: cover;
   filter: brightness(0.5);
 `;
+
+export const BannerLinksWrapper = styled.div`
+  display: flex;
+`;

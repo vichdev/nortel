@@ -2,7 +2,12 @@ import React from "react";
 import { IPropsBanner } from "./interfaces/IScreenBanner";
 import * as Styles from "./styles";
 
-const ScreenBanners: React.FC<IPropsBanner> = ({ title, description, img }) => {
+const ScreenBanners: React.FC<IPropsBanner> = ({
+  title,
+  description,
+  img,
+  children,
+}) => {
   console.log(img);
   return (
     <Styles.BannerWrapper>
@@ -11,6 +16,7 @@ const ScreenBanners: React.FC<IPropsBanner> = ({ title, description, img }) => {
         <Styles.BannerTitle>{title}</Styles.BannerTitle>
         <Styles.BannerDescription>{description}</Styles.BannerDescription>
       </Styles.BannerContainer>
+      <Styles.BannerLinksWrapper>{children}</Styles.BannerLinksWrapper>
     </Styles.BannerWrapper>
   );
 };

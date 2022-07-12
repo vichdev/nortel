@@ -12,7 +12,9 @@ const Produtos: React.FC = () => {
         title="Produtos"
         description="Conheça todas nossas opções para seu negócio!"
         img={banner}
-      />
+      >
+        <div></div>
+      </ScreenBanners>
       <Styles.ProductsWrapper></Styles.ProductsWrapper>
     </>
   );

@@ -3,16 +3,17 @@ import { Button } from "../Button/styles";
 
 export const FooterContainer = styled.div`
   width: 100%;
-  max-width: 80%;
-  margin: 0 auto;
   height: 30rem;
   padding: 1rem;
+  box-shadow: 5px 5px 15px 15px #eeeeee;
 `;
 
 export const Footer = styled.footer`
   width: 100%;
   height: 100%;
   justify-content: flex-end;
+  margin: 0 auto;
+  max-width: 80%;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -36,20 +37,25 @@ export const EnterpriseInformationContainer = styled.div`
 
 export const EnterpriseInformation = styled.span``;
 
-export const EntepriseInformationEmail = styled.span`
+export const EntepriseInformationEmail = styled.a`
   width: 100%;
-  max-width: 13rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+  svg {
+    margin-right: 0.5rem;
+  }
 `;
 
 export const EntepriseInformationFone = styled.span`
   width: 100%;
-  max-width: 10rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  svg {
+    margin-right: 0.5rem;
+  }
 `;
 
 export const EntepriseInformationLink = styled.a`
@@ -58,13 +64,21 @@ export const EntepriseInformationLink = styled.a`
 `;
 
 export const EntepriseInformationLogo = styled.img`
-  width: 200px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
+`;
+
+export const EnterpriseInformationLogoWrapper = styled.div`
+  width: 100%;
+  max-width: 10rem;
+  height: 100%;
+  max-height: 7rem;
+  padding-right: 1rem;
 `;
 
 export const FooterButton = styled(Button)`
   width: 100%;
-  max-width: 30%;
+  max-width: 50%;
   color: #fff;
   height: 40px;
   padding: 0;
@@ -72,13 +86,13 @@ export const FooterButton = styled(Button)`
   font-weight: 500;
   &:hover {
     background-color: white;
-    color: var(--yellow);
+    color: var(--primary);
   }
 `;
 
 export const CopyrightText = styled.h1`
-  color: black;
   font-size: 1rem;
+  font-weight: 300;
   height: 15%;
 `;
 
@@ -98,11 +112,13 @@ export const SocialMediasContainer = styled.div`
   justify-content: flex-end;
 `;
 
-export const SocialMedia = styled.div<{ BgColor: string }>`
+export const SocialMedia = styled.a<{ BgColor: string }>`
   width: 2rem;
   display: flex;
   align-items: center;
   border-radius: 0.5rem;
+  text-decoration: none;
+  color: black;
   height: 2rem;
   padding: 0.1rem;
   svg {
@@ -122,6 +138,7 @@ export const FooterNavBarWrapper = styled.div`
   display: flex;
   width: 100%;
   padding: 1rem;
+  justify-content: space-around;
 `;
 
 export const FooterNavBar = styled.div`
@@ -145,7 +162,14 @@ export const FooterNavBarLink = styled.a`
 `;
 
 export const Divider = styled.hr`
-  color: #eeeeee;
-  background-color: #eeeeee;
+  color: #dddddd;
+  opacity: 0.5;
   width: 100%;
+`;
+
+export const Maps = styled.iframe`
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
 `;
