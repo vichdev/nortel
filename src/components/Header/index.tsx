@@ -53,21 +53,19 @@ const Header: React.FC = () => {
                 <Styles.DropdownContainer isScrolled={shrink}>
                   <Styles.DropdownList>
                     <Styles.DropdownMenuIcon />
-                    <Link to="/produtos/hotelaria">
-                      <Styles.DropdownText>Hotelaria</Styles.DropdownText>
-                    </Link>
+                    <Link to="/produtos/hotelaria">Hotelaria</Link>
                   </Styles.DropdownList>
                   <Styles.DropdownList>
                     <Styles.DropdownMenuIcon />
-                    <Link to="/produtos/veterinarios">
-                      <Styles.DropdownText>Veterinários</Styles.DropdownText>
-                    </Link>
+                    <Link to="/produtos/veterinarios">Veterinários</Link>
                   </Styles.DropdownList>
                   <Styles.DropdownList>
                     <Styles.DropdownMenuIcon />
-                    <Link to="/produtos/fitoterapicos">
-                      <Styles.DropdownText>Fitoterápicos</Styles.DropdownText>
-                    </Link>
+                    <Link to="/produtos/fitoterapicos">Fitoterápicos</Link>
+                  </Styles.DropdownList>
+                  <Styles.DropdownList>
+                    <Styles.DropdownMenuIcon />
+                    <Link to="/produtos/personalize">Personalizados</Link>
                   </Styles.DropdownList>
                 </Styles.DropdownContainer>
               </Styles.NavBar>
@@ -108,21 +106,19 @@ const Header: React.FC = () => {
                 <Styles.DropdownContainer isScrolled={true}>
                   <Styles.DropdownList>
                     <Styles.DropdownMenuIcon />
-                    <Link to="/produtos/hotelaria">
-                      <Styles.DropdownText>Hotelaria</Styles.DropdownText>
-                    </Link>
+                    <Link to="/produtos/hotelaria">Hotelaria</Link>
                   </Styles.DropdownList>
                   <Styles.DropdownList>
                     <Styles.DropdownMenuIcon />
-                    <Link to="/produtos/veterinarios">
-                      <Styles.DropdownText>Veterinários</Styles.DropdownText>
-                    </Link>
+                    <Link to="/produtos/veterinarios">Veterinários</Link>
                   </Styles.DropdownList>
                   <Styles.DropdownList>
                     <Styles.DropdownMenuIcon />
-                    <Link to="/produtos/fitoterapicos">
-                      <Styles.DropdownText>Fitoterápicos</Styles.DropdownText>
-                    </Link>
+                    <Link to="/produtos/fitoterapicos">Fitoterápicos</Link>
+                  </Styles.DropdownList>
+                  <Styles.DropdownList>
+                    <Styles.DropdownMenuIcon />
+                    <Link to="/produtos/personalize">Personalizados</Link>
                   </Styles.DropdownList>
                 </Styles.DropdownContainer>
               </Styles.NavBar>

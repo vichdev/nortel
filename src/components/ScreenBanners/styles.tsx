@@ -14,6 +14,9 @@ export const BannerContainer = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  svg {
+    color: white;
+  }
 `;
 
 export const BannerTitle = styled.h1`
@@ -36,4 +39,11 @@ export const BannerImg = styled.img`
 
 export const BannerLinksWrapper = styled.div`
   display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  svg {
+    cursor: default;
+  }
 `;

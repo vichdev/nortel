@@ -37,6 +37,8 @@ export const EnterpriseInformationContainer = styled.div`
 
 export const EnterpriseInformation = styled.span``;
 
+export const EntepriseInformationEmailWrapper = styled.div``;
+
 export const EntepriseInformationEmail = styled.a`
   width: 100%;
   display: flex;
@@ -61,6 +63,9 @@ export const EntepriseInformationFone = styled.span`
 export const EntepriseInformationLink = styled.a`
   display: flex;
   width: 100%;
+  &:hover {
+    color: var(--primary);
+  }
 `;
 
 export const EntepriseInformationLogo = styled.img`
@@ -78,7 +83,7 @@ export const EnterpriseInformationLogoWrapper = styled.div`
 
 export const FooterButton = styled(Button)`
   width: 100%;
-  max-width: 50%;
+  max-width: 15rem;
   color: #fff;
   height: 40px;
   padding: 0;
@@ -92,7 +97,8 @@ export const FooterButton = styled(Button)`
 
 export const CopyrightText = styled.h1`
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 600;
+  color: var(--text);
   height: 15%;
 `;
 
@@ -149,16 +155,24 @@ export const FooterNavBar = styled.div`
 `;
 
 export const FooterNavBarTitle = styled.h1`
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 1rem;
 `;
 
-export const FooterNavBarLink = styled.a`
-  margin-bottom: 0.5rem;
+export const FooterNavBarLink = styled.div`
+  margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  text-decoration: none;
   color: #101820;
+  a {
+    color: black;
+    cursor: pointer;
+    &:hover {
+      color: var(--primary);
+    }
+  }
 `;
 
 export const Divider = styled.hr`

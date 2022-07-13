@@ -15,8 +15,8 @@ const MenuIconFade = keyframes`
 `;
 
 const DropdownMenuAnimation = keyframes`
-0% {height: 0rem; }
-100% {height: 8rem; }
+0% {height: 9rem; }
+100% {height: 15rem; }
 `;
 
 //Header
@@ -60,12 +60,11 @@ export const NavBarWrapper = styled.div`
 
 export const DropdownContainer = styled.div<{ isScrolled?: Boolean }>`
   width: 100%;
-  max-width: 10rem;
-  height: 8rem;
+  max-width: 11rem;
   z-index: 3000;
   align-items: center;
   display: none;
-  padding: 0.5rem;
+  padding: 5px;
   flex-direction: column;
   position: absolute;
   top: ${(props) => (props.isScrolled ? "4rem" : "5rem")};
@@ -78,13 +77,15 @@ export const DropdownContainer = styled.div<{ isScrolled?: Boolean }>`
 `;
 
 export const DropdownText = styled.a`
-  color: black;
+  color: #333333;
+  font-size: 1rem;
 `;
 
 export const DropdownList = styled.div`
   width: 100%;
   align-items: center;
   display: flex;
+  padding: 0.5rem;
   transition: 0.5s ease-in-out;
   ${DropdownMenuIcon} {
     position: relative;
@@ -99,6 +100,10 @@ export const DropdownList = styled.div`
       visibility: visible;
       display: flex;
     }
+  }
+  a {
+    color: #333333;
+    font-size: 1rem;
   }
 `;
 
@@ -128,7 +133,7 @@ export const NavBar = styled.div<{ isScrolled?: Boolean }>`
   }
 `;
 
-export const NavBarLink = styled.a<{ isScrolled: Boolean }>`
+export const NavBarLink = styled.span<{ isScrolled: Boolean }>`
   position: relative;
   opacity: 0.7;
   display: flex;

@@ -4,6 +4,7 @@ import { FiInstagram, FiFacebook, FiLinkedin } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdEmail, MdPhone } from "react-icons/md";
 import logonortel from "../../assets/nortel_logo_3.png";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -17,10 +18,12 @@ const Footer: React.FC = () => {
             <Styles.EnterpriseInformation>
               R. São Miguel dos Campos, 29 - Valéria, Salvador - BA, 41301-360
             </Styles.EnterpriseInformation>
-            <Styles.EntepriseInformationEmail href="mailto:sabonetes.nortel@gmail.com?subject=DÚVIDAS%20NORTEL">
-              <MdEmail />
-              sabonetes.nortel@gmail.com
-            </Styles.EntepriseInformationEmail>
+            <Styles.EntepriseInformationEmailWrapper>
+              <Styles.EntepriseInformationEmail href="mailto:sabonetes.nortel@gmail.com?subject=DÚVIDAS%20NORTEL">
+                <MdEmail />
+                sabonetes.nortel@gmail.com
+              </Styles.EntepriseInformationEmail>
+            </Styles.EntepriseInformationEmailWrapper>
             <Styles.EntepriseInformationFone>
               <MdPhone />
               +55 (71) 3301-7719
@@ -40,16 +43,30 @@ const Footer: React.FC = () => {
           <Styles.FooterNavBarWrapper>
             <Styles.FooterNavBar>
               <Styles.FooterNavBarTitle>Mapa do site</Styles.FooterNavBarTitle>
-              <Styles.FooterNavBarLink>Home</Styles.FooterNavBarLink>
-              <Styles.FooterNavBarLink>Sobre nós</Styles.FooterNavBarLink>
-              <Styles.FooterNavBarLink>Produtos</Styles.FooterNavBarLink>
-              <Styles.FooterNavBarLink>Contato</Styles.FooterNavBarLink>
+              <Styles.FooterNavBarLink>
+                <Link to={"/"}>Home</Link>
+              </Styles.FooterNavBarLink>
+              <Styles.FooterNavBarLink>
+                <Link to={"/about-us"}>Sobre nós</Link>
+              </Styles.FooterNavBarLink>
+              <Styles.FooterNavBarLink>
+                <Link to={"/produtos"}>Produtos</Link>
+              </Styles.FooterNavBarLink>
+              <Styles.FooterNavBarLink>
+                <Link to={"/contacts"}>Contato</Link>
+              </Styles.FooterNavBarLink>
             </Styles.FooterNavBar>
             <Styles.FooterNavBar>
               <Styles.FooterNavBarTitle>Produtos</Styles.FooterNavBarTitle>
-              <Styles.FooterNavBarLink>Veterinarios</Styles.FooterNavBarLink>
-              <Styles.FooterNavBarLink>Hotelaria</Styles.FooterNavBarLink>
-              <Styles.FooterNavBarLink>Fitoterapicos</Styles.FooterNavBarLink>
+              <Styles.FooterNavBarLink>
+                <Link to={"/produtos/hotelaria"}>Hotelaria</Link>
+              </Styles.FooterNavBarLink>
+              <Styles.FooterNavBarLink>
+                <Link to={"/produtos/veterinarios"}>Veterinários</Link>
+              </Styles.FooterNavBarLink>
+              <Styles.FooterNavBarLink>
+                <Link to={"/produtos/fitoterapicos"}>Fitoterápicos</Link>
+              </Styles.FooterNavBarLink>
             </Styles.FooterNavBar>
           </Styles.FooterNavBarWrapper>
           <Styles.Maps

@@ -15,8 +15,8 @@ const ScreenBanners: React.FC<IPropsBanner> = ({
       <Styles.BannerContainer>
         <Styles.BannerTitle>{title}</Styles.BannerTitle>
         <Styles.BannerDescription>{description}</Styles.BannerDescription>
+        <Styles.BannerLinksWrapper>{children}</Styles.BannerLinksWrapper>
       </Styles.BannerContainer>
-      <Styles.BannerLinksWrapper>{children}</Styles.BannerLinksWrapper>
     </Styles.BannerWrapper>
   );
 };
