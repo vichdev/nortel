@@ -1,0 +1,28 @@
+.carouselProduto .swiper-slide  {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;;
+}
+
+.carouselProduto .swiper-button-prev {
+  color: #000; 
+  left: 2rem;
+}
+
+.carouselProduto .swiper-button-next {
+  color: #000; 
+  right: 2rem;
+}
+.carouselProduto .swiper-navigation-size {
+  font-size: 10px;
+}
+.carouselProduto  {
+  --swiper-navigation-size: 1.5rem;
+  --swiper-theme-color: var(--primary);
+}
+
+.carouselProduto .swiper-pagination {
+  bottom: 2rem;
+}
+

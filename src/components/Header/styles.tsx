@@ -11,7 +11,7 @@ export const DropdownMenuIcon = styled(RiArrowDropRightLine)`
 
 const MenuIconFade = keyframes`
 0% {width: 0%}
-100% {width: 13%}
+100% {font-size: 30px}
 `;
 
 const DropdownMenuAnimation = keyframes`
@@ -29,6 +29,8 @@ export const HeaderWrapper = styled.div<{ isScrolled?: Boolean }>`
   height: ${(props) => (props.isScrolled ? "6rem" : "8rem")};
   background-color: ${(props) => (props.isScrolled ? "white" : "transparent")};
   transition: 0.6s;
+  box-shadow: ${(props) =>
+    props.isScrolled ? "0px -3px 50px 24px rgba(154, 154, 154, 0.24)" : ""};
 `;
 
 export const Header = styled.header<{ isScrolled?: Boolean }>`
@@ -65,14 +67,15 @@ export const DropdownContainer = styled.div<{ isScrolled?: Boolean }>`
   align-items: center;
   display: none;
   padding: 5px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
   flex-direction: column;
   position: absolute;
-  top: ${(props) => (props.isScrolled ? "4rem" : "5rem")};
+  top: ${(props) => (props.isScrolled ? "4.5rem" : "5.5rem")};
   justify-content: space-around;
   background-color: white;
   transition: ${DropdownMenuAnimation} 0.7s ease-in-out;
   animation-name: ${DropdownMenuAnimation};
-  animation-duration: 0.6s;
+  animation-duration: 0.3s;
   animation-fill-mode: forwards;
 `;
 

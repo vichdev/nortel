@@ -1,0 +1,32 @@
+.carouselPrincipal .swiper-slide  {
+  display: flex;
+  width: 100%;
+  padding: 0rem;
+  align-items: center;
+  justify-content: center;;
+}
+
+.carouselPrincipal .swiper-button-next {
+  color: #fff
+}
+
+.carouselPrincipal .swiper-button-prev {
+  color: #fff; 
+  left: 2rem;
+}
+
+.carouselPrincipal .swiper-button-next {
+  color: #fff; 
+  right: 2rem;
+}
+.carouselPrincipal .swiper-navigation-size {
+  font-size: 10px;
+}
+.carouselPrincipal { 
+  --swiper-navigation-size: 1.5rem;
+  --swiper-theme-color: white;
+}
+
+.carouselPrincipal .swiper-pagination {
+  bottom: 2rem;
+}

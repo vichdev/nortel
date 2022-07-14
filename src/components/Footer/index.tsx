@@ -13,7 +13,10 @@ const Footer: React.FC = () => {
         <Styles.FooterWrapper>
           <Styles.EnterpriseInformationContainer>
             <Styles.EnterpriseInformationLogoWrapper>
-              <Styles.EntepriseInformationLogo src={logonortel} alt="" />
+              <Styles.EntepriseInformationLogo
+                src={logonortel}
+                alt="Logo da nortel"
+              />
             </Styles.EnterpriseInformationLogoWrapper>
             <Styles.EnterpriseInformation>
               R. São Miguel dos Campos, 29 - Valéria, Salvador - BA, 41301-360
@@ -70,8 +73,9 @@ const Footer: React.FC = () => {
             </Styles.FooterNavBar>
           </Styles.FooterNavBarWrapper>
           <Styles.Maps
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.7220512902913!2d-38.43112268459762!3d-12.861220461087603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71613d91b8a5611%3A0xe453c48c65392409!2sR.%20S%C3%A3o%20Miguel%20dos%20Campos%2C%2029%20-%20Val%C3%A9ria%2C%20Salvador%20-%20BA%2C%2041301-360!5e0!3m2!1spt-BR!2sbr!4v1657643616900!5m2!1spt-BR!2sbr"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.7219702268!2d-38.431122685179034!3d-12.861225690928348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71613d91b8a5611%3A0xe453c48c65392409!2sR.%20S%C3%A3o%20Miguel%20dos%20Campos%2C%2029%20-%20Val%C3%A9ria%2C%20Salvador%20-%20BA%2C%2041301-360!5e0!3m2!1spt-BR!2sbr!4v1657756792107!5m2!1spt-BR!2sbr"
             title="Localizacão"
+            referrerPolicy="no-referrer-when-downgrade"
             loading="lazy"
           ></Styles.Maps>
         </Styles.FooterWrapper>

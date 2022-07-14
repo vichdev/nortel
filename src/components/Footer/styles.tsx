@@ -99,7 +99,9 @@ export const CopyrightText = styled.h1`
   font-size: 1rem;
   font-weight: 600;
   color: var(--text);
-  height: 15%;
+  svg {
+    color: var(--text);
+  }
 `;
 
 export const FooterCopyrightContainer = styled.div`

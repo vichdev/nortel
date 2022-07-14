@@ -1,14 +1,14 @@
 import React from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 import { GlobalStyles } from "./styles/globalStyles";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 //Views
 import Home from "./views/Home";
 import Produtos from "./views/Produtos";
 import AboutUs from "./views/AboutUs";
 import ProdutosVeterinarios from "./views/ProdutosVeterinarios";
+import Contact from "./views/Contact";
 
 const App: React.FC = () => {
   return (
@@ -18,6 +18,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/produtos" element={<Produtos />} />
+        <Route path="/contact" element={<Contact />} />
         <Route
           path="/produtos/veterinarios"
           element={<ProdutosVeterinarios />}

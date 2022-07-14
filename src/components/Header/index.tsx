@@ -70,9 +70,11 @@ const Header: React.FC = () => {
                 </Styles.DropdownContainer>
               </Styles.NavBar>
               <Styles.NavBar>
-                <Styles.NavBarLink isScrolled={shrink}>
-                  Contato
-                </Styles.NavBarLink>
+                <Link to={"/contact"}>
+                  <Styles.NavBarLink isScrolled={shrink}>
+                    Contato
+                  </Styles.NavBarLink>
+                </Link>
               </Styles.NavBar>
             </Styles.NavBarWrapper>
           </Styles.Header>
