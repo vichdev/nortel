@@ -4,6 +4,8 @@ import { FiInstagram, FiFacebook, FiLinkedin } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdEmail, MdPhone } from "react-icons/md";
 import logonortel from "../../assets/nortel_logo_3.png";
+import shopee from "../../assets/lojas/shopee.svg";
+import mercado_livre from "../../assets/lojas/mercado_livre.svg";
 import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
@@ -35,13 +37,20 @@ const Footer: React.FC = () => {
               <FaWhatsapp />
               +55 (71) 3301-7719
             </Styles.EntepriseInformationFone>
-            <Styles.FooterButton
-              bgColor="var(--primary)"
-              color="#fff"
-              title=" Visite nosso e-commerce"
-            >
-              Visite nosso e-commerce
-            </Styles.FooterButton>
+            <Styles.LojasWrapper>
+              <Styles.LojasLink href="https://www.mercadolivre.com.br/perfil/NORTELNORTEL20220717153637">
+                <Styles.LojasImg
+                  src={mercado_livre}
+                  alt="Link para acesso a loja do mercado livre."
+                />
+              </Styles.LojasLink>
+              <Styles.LojasLink href="https://shopee.com.br/?gclid=CjwKCAjwrNmWBhA4EiwAHbjEQDY3_-yIOrnBTZPT8sWlmysKHpZez4ELAPlWUJTZ97B202RXrni4pBoCMMUQAvD_BwE">
+                <Styles.LojasImg
+                  src={shopee}
+                  alt="Link para acesso a loja da shopee."
+                />
+              </Styles.LojasLink>
+            </Styles.LojasWrapper>
           </Styles.EnterpriseInformationContainer>
           <Styles.FooterNavBarWrapper>
             <Styles.FooterNavBar>
@@ -73,7 +82,7 @@ const Footer: React.FC = () => {
             </Styles.FooterNavBar>
           </Styles.FooterNavBarWrapper>
           <Styles.Maps
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.7219702268!2d-38.431122685179034!3d-12.861225690928348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71613d91b8a5611%3A0xe453c48c65392409!2sR.%20S%C3%A3o%20Miguel%20dos%20Campos%2C%2029%20-%20Val%C3%A9ria%2C%20Salvador%20-%20BA%2C%2041301-360!5e0!3m2!1spt-BR!2sbr!4v1657756792107!5m2!1spt-BR!2sbr"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15558.889287760481!2d-38.4289163!3d-12.861203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5663b34c84814a9b!2sNortel%20Sabonetes!5e0!3m2!1spt-BR!2sbr!4v1658318328382!5m2!1spt-BR!2sbr"
             title="Localizacão"
             referrerPolicy="no-referrer-when-downgrade"
             loading="lazy"
@@ -91,7 +100,7 @@ const Footer: React.FC = () => {
               BgColor="white"
               href="https://www.instagram.com/sabonetesnortel/"
             >
-              <FiInstagram />
+              <FiInstagram title="Instagram - Nortel" />
             </Styles.SocialMedia>
             |
             <Styles.SocialMedia
@@ -99,7 +108,7 @@ const Footer: React.FC = () => {
               BgColor="white"
               href="https://www.facebook.com/sabonetesnortel"
             >
-              <FiFacebook />
+              <FiFacebook title="Facebook - Nortel" />
             </Styles.SocialMedia>
             |
             <Styles.SocialMedia
@@ -107,7 +116,7 @@ const Footer: React.FC = () => {
               BgColor="white"
               href="https://www.linkedin.com/in/nortel-sabonetes-59b328116/?originalSubdomain=br"
             >
-              <FiLinkedin />
+              <FiLinkedin title="Linkedin - Nortel" />
             </Styles.SocialMedia>
           </Styles.SocialMediasContainer>
         </Styles.FooterCopyrightContainer>

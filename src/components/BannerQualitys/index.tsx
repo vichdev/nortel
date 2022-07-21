@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import * as Styles from "./styles";
 import banner from "../../assets/banner_quality.jpg";
 import { FaLeaf } from "react-icons/fa";
+import { BsBookmarkStar, BsBoxSeam } from "react-icons/bs";
+import { BiHappyBeaming } from "react-icons/bi";
 
 const BannerQualitys: React.FC = () => {
   const [animation, setAnimation] = useState<boolean>(false);
@@ -35,9 +37,9 @@ const BannerQualitys: React.FC = () => {
             </Styles.BannerInformationContent>
           </Styles.BannerInformationContainer>
           <Styles.BannerInformationContainer>
-            <FaLeaf />
+            <BsBookmarkStar />
             <Styles.BannerInformationTitle>
-              Sustentabilidade
+              Qualidade
             </Styles.BannerInformationTitle>
             <Styles.BannerInformationContent>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
@@ -47,9 +49,9 @@ const BannerQualitys: React.FC = () => {
             </Styles.BannerInformationContent>
           </Styles.BannerInformationContainer>
           <Styles.BannerInformationContainer>
-            <FaLeaf />
+            <BsBoxSeam />
             <Styles.BannerInformationTitle>
-              Sustentabilidade
+              Logística
             </Styles.BannerInformationTitle>
             <Styles.BannerInformationContent>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
@@ -59,9 +61,9 @@ const BannerQualitys: React.FC = () => {
             </Styles.BannerInformationContent>
           </Styles.BannerInformationContainer>
           <Styles.BannerInformationContainer>
-            <FaLeaf />
+            <BiHappyBeaming />
             <Styles.BannerInformationTitle>
-              Sustentabilidade
+              Clientes Satisfeitos
             </Styles.BannerInformationTitle>
             <Styles.BannerInformationContent>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean

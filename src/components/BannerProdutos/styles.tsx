@@ -22,6 +22,14 @@ export const ProductsHeader = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  span {
+    font-size: 1.25rem;
+  }
 `;
 
 export const ProductsContainer = styled.div`

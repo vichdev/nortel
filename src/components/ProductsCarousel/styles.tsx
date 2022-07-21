@@ -19,11 +19,18 @@ export const ProductsCarouselDescription = styled.span`
 `;
 
 export const ProductsCarouselImg = styled.img`
-  width: 200px;
-  border-radius: 99rem;
-  height: 200px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 `;
 
+export const ImgWrapper = styled.div`
+  width: 100%;
+  max-width: 20rem;
+  max-height: 15rem;
+  height: 100%;
+`;
 export const ProductsCarouselContainer = styled.div`
   width: 100%;
   height: 80%;

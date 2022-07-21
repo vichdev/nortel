@@ -64,11 +64,11 @@ export const BannerInformationContainer = styled.div`
   justify-content: space-between;
   text-align: center;
   width: 250px;
-  height: 300px;
+  height: 250px;
   background-color: white;
   svg {
     font-size: 3rem;
-    color: var(--secondary);
+    color: #f0ce0fee;
   }
 `;
 

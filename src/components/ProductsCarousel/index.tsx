@@ -27,7 +27,9 @@ const ProductsCarousel: React.FC<ICarousel> = ({ produtos }) => {
         return (
           <SwiperSlide key={index} style={{ display: "flex" }}>
             <Styles.ProductsCarouselContainer key={index}>
-              <Styles.ProductsCarouselImg src={item.foto} alt={item.alt} />
+              <Styles.ImgWrapper>
+                <Styles.ProductsCarouselImg src={item.foto} alt={item.alt} />
+              </Styles.ImgWrapper>
               <Styles.DescriptionWrapper>
                 <Styles.ProductsCarouselTitle>
                   {item.titulo}

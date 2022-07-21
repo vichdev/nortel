@@ -10,8 +10,8 @@ export const BannerContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 25%;
   transform: translate(-50%, -50%);
   text-align: center;
   svg {
@@ -22,7 +22,6 @@ export const BannerContainer = styled.div`
 export const BannerTitle = styled.h1`
   font-size: 4rem;
   color: #fff;
-  margin-bottom: 2rem;
 `;
 
 export const BannerDescription = styled.span`

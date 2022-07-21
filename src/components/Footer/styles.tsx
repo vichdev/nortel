@@ -35,6 +35,22 @@ export const EnterpriseInformationContainer = styled.div`
   align-items: flex-start;
 `;
 
+export const LojasWrapper = styled.div`
+  display: flex;
+  width: 100%;
+`;
+
+export const LojasLink = styled.a`
+  width: 8rem;
+  margin-right: 1rem;
+  height: 6rem;
+`;
+
+export const LojasImg = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
 export const EnterpriseInformation = styled.span``;
 
 export const EntepriseInformationEmailWrapper = styled.div``;
@@ -44,7 +60,7 @@ export const EntepriseInformationEmail = styled.a`
   display: flex;
   align-items: center;
   text-decoration: underline;
-  color: black;
+  color: var(--text);
   cursor: pointer;
   svg {
     margin-right: 0.5rem;
@@ -63,6 +79,7 @@ export const EntepriseInformationFone = styled.span`
 export const EntepriseInformationLink = styled.a`
   display: flex;
   width: 100%;
+  color: var(--sub-text);
   &:hover {
     color: var(--primary);
   }
@@ -92,13 +109,19 @@ export const FooterButton = styled(Button)`
   &:hover {
     background-color: white;
     color: var(--primary);
+    a {
+      color: var(--primary);
+    }
+  }
+  a {
+    color: white;
   }
 `;
 
 export const CopyrightText = styled.h1`
   font-size: 1rem;
   font-weight: 600;
-  color: var(--text);
+  color: var(--sub-text);
   svg {
     color: var(--text);
   }
@@ -169,7 +192,7 @@ export const FooterNavBarLink = styled.div`
   text-decoration: none;
   color: #101820;
   a {
-    color: black;
+    color: var(--text);
     cursor: pointer;
     &:hover {
       color: var(--primary);

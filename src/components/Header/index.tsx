@@ -52,19 +52,15 @@ const Header: React.FC = () => {
                 <RiArrowDropDownLine />
                 <Styles.DropdownContainer isScrolled={shrink}>
                   <Styles.DropdownList>
-                    <Styles.DropdownMenuIcon />
                     <Link to="/produtos/hotelaria">Hotelaria</Link>
                   </Styles.DropdownList>
                   <Styles.DropdownList>
-                    <Styles.DropdownMenuIcon />
                     <Link to="/produtos/veterinarios">Veterinários</Link>
                   </Styles.DropdownList>
                   <Styles.DropdownList>
-                    <Styles.DropdownMenuIcon />
                     <Link to="/produtos/fitoterapicos">Fitoterápicos</Link>
                   </Styles.DropdownList>
                   <Styles.DropdownList>
-                    <Styles.DropdownMenuIcon />
                     <Link to="/produtos/personalize">Personalizados</Link>
                   </Styles.DropdownList>
                 </Styles.DropdownContainer>
@@ -107,25 +103,25 @@ const Header: React.FC = () => {
                 <RiArrowDropDownLine />
                 <Styles.DropdownContainer isScrolled={true}>
                   <Styles.DropdownList>
-                    <Styles.DropdownMenuIcon />
                     <Link to="/produtos/hotelaria">Hotelaria</Link>
                   </Styles.DropdownList>
                   <Styles.DropdownList>
-                    <Styles.DropdownMenuIcon />
                     <Link to="/produtos/veterinarios">Veterinários</Link>
                   </Styles.DropdownList>
                   <Styles.DropdownList>
-                    <Styles.DropdownMenuIcon />
                     <Link to="/produtos/fitoterapicos">Fitoterápicos</Link>
                   </Styles.DropdownList>
                   <Styles.DropdownList>
-                    <Styles.DropdownMenuIcon />
                     <Link to="/produtos/personalize">Personalizados</Link>
                   </Styles.DropdownList>
                 </Styles.DropdownContainer>
               </Styles.NavBar>
               <Styles.NavBar>
-                <Styles.NavBarLink isScrolled={true}>Contato</Styles.NavBarLink>
+                <Link to={"/contact"}>
+                  <Styles.NavBarLink isScrolled={true}>
+                    Contato
+                  </Styles.NavBarLink>
+                </Link>
               </Styles.NavBar>
             </Styles.NavBarWrapper>
           </Styles.Header>

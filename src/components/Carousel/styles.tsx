@@ -44,7 +44,20 @@ export const CarouselText = styled.span`
 `;
 
 export const ButtonCarousel = styled(Button)`
-  max-width: 30%;
+  max-width: 100%;
+  a {
+    color: white;
+  }
+  &:hover {
+    filter: brightness(0.9);
+  }
+`;
+
+export const LinkSaibaMais = styled.div`
+  max-width: 12rem;
+  width: 100%;
+  color: white;
+
   &:hover {
     filter: brightness(0.9);
   }

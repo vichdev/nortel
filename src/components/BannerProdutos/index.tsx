@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../Button";
 import * as Styles from "./styles";
 
 interface IProduto {
@@ -15,23 +14,23 @@ const Banner: React.FC = () => {
       title: "Veterinários",
       description: "O melhor produto para seu Pet.",
       alt: "Imagem de um produto veterinário representando a linha veterinária.",
-      imagePath: "productbanner_1.jpg",
+      imagePath: "productbanner_5.jpg",
     },
     {
       title: "Hotelaria",
       description: "O melhor produto para seu negócio.",
       alt: "Imagem de um produto para hotéis e negócios representando a linha de hotelaria.",
-      imagePath: "productbanner_2.jpg",
+      imagePath: "productbanner_7.jpg",
     },
     {
       title: "Fitoterápicos",
       description: "O melhor produto para você.",
       alt: "Imagem de um produto fitoterápico representando a linha fitoterápica.",
-      imagePath: "productbanner_3.jpg",
+      imagePath: "productbanner_6.jpg",
     },
   ];
 
-  const getImagePath = (image: string) => {
+  const getImagePath = (image: string): string => {
     return require(`../../assets/ProductsBanner/${image}`);
   };
 

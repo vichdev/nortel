@@ -1,17 +1,11 @@
 import styled, { keyframes } from "styled-components";
 import { RiArrowDropRightLine } from "react-icons/ri";
 
-//Icons
-export const DropdownMenuIcon = styled(RiArrowDropRightLine)`
-  color: var(--secondary);
-  position: absolute;
-`;
-
 //Animations
 
 const MenuIconFade = keyframes`
-0% {width: 0%}
-100% {font-size: 30px}
+0% {font-size: 0px}
+100% {font-size: 15px}
 `;
 
 const DropdownMenuAnimation = keyframes`
@@ -63,15 +57,16 @@ export const NavBarWrapper = styled.div`
 export const DropdownContainer = styled.div<{ isScrolled?: Boolean }>`
   width: 100%;
   max-width: 11rem;
+  height: 100%;
+  max-height: 13rem;
   z-index: 3000;
   align-items: center;
   display: none;
-  padding: 5px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
   flex-direction: column;
   position: absolute;
   top: ${(props) => (props.isScrolled ? "4.5rem" : "5.5rem")};
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: white;
   transition: ${DropdownMenuAnimation} 0.7s ease-in-out;
   animation-name: ${DropdownMenuAnimation};
@@ -86,22 +81,16 @@ export const DropdownText = styled.a`
 
 export const DropdownList = styled.div`
   width: 100%;
+  height: 100%;
   align-items: center;
   display: flex;
-  padding: 0.5rem;
   transition: 0.5s ease-in-out;
-  ${DropdownMenuIcon} {
-    position: relative;
-    display: none;
-    transition: 3s ease;
-    animation-name: ${MenuIconFade};
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-  }
+  padding: 1rem;
+
   &:hover {
-    ${DropdownMenuIcon} {
-      visibility: visible;
-      display: flex;
+    background-color: var(--primary);
+    a {
+      color: white;
     }
   }
   a {
@@ -140,6 +129,7 @@ export const NavBarLink = styled.span<{ isScrolled: Boolean }>`
   position: relative;
   opacity: 0.7;
   display: flex;
+  font-size: 1rem;
   cursor: pointer;
   text-decoration: none;
   color: ${(props) => (props.isScrolled ? "#000" : "#fff")};
@@ -152,9 +142,8 @@ export const NavBarLink = styled.span<{ isScrolled: Boolean }>`
     right: 0;
     width: 0;
     margin: auto;
-    right: 0;
     left: 0;
-    bottom: -7px;
+    bottom: -0.5rem;
     transition: 0.3s;
   }
   :hover:after {

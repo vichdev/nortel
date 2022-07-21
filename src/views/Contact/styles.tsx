@@ -6,6 +6,7 @@ export const ContactWrapper = styled.div`
   height: 50rem;
   display: flex;
   justify-content: center;
+  padding: 1rem;
   align-items: center;
 `;
 
@@ -22,9 +23,10 @@ export const ContactContainer = styled.div`
 export const FormButtonWrapper = styled.div`
   display: flex;
   width: 100%;
-  align-items: flex-end;
+  align-items: center;
   margin-top: 2rem;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  flex-direction: column;
 `;
 
 export const FormButton = styled.input`
@@ -117,28 +119,116 @@ export const TitleWrapper = styled.div`
 
 export const Title = styled.h1`
   margin-bottom: 1rem;
+  color: var(--text);
 `;
 
-export const Description = styled.span``;
+export const Description = styled.span`
+  color: var(--sub-text);
+`;
 
 //Informacoes contato
 
 export const InformationWrapper = styled.div`
   width: 100%;
   height: 100%;
-  max-width: 35rem;
+  max-width: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 `;
 
 export const InformationContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 19rem;
+  max-height: 6rem;
+  background-color: #f8f8f8;
+  justify-content: space-around;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: -1px -1px 25px 6px rgba(0, 0, 0, 0.1);
 `;
 
-export const InformationTitle = styled.h1``;
+export const IconWrapper = styled.div`
+  width: 50px;
+  height: 50px;
+  background-color: rgba(52, 94, 171, 0.1);
+  border-radius: 99rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    color: var(--primary);
+  }
+`;
 
-export const InformationDescription = styled.span``;
+export const InformationContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 70%;
+  justify-content: space-around;
+`;
+
+export const InformationTitle = styled.h1`
+  color: var(--text);
+  font-size: 24px;
+`;
+
+export const InformationDescription = styled.span`
+  color: #6c6f75;
+  font-size: 14px;
+`;
 
 export const ErrorMessage = styled.p`
   color: red;
   margin-top: 0.5rem;
+`;
+
+export const EmailErrorMessage = styled.span<{ isErro: boolean }>`
+  margin-top: 0.5rem;
+  color: ${(props) => (props.isErro ? "green" : "red")};
+`;
+
+export const LojasWrapper = styled.div`
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+`;
+
+export const LojasLink = styled.a<{ setBackground?: boolean }>`
+  width: 4rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  svg {
+    font-size: 3rem;
+    color: ${(props) => (props.color ? props.color : "var(--text)")};
+    border-radius: 0.5rem;
+    background-image: ${(props) =>
+      props.setBackground
+        ? "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)"
+        : "transparent"};
+    &:hover {
+      color: var(--primary);
+    }
+  }
+`;
+
+export const LojasImg = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
+export const LojasTitle = styled.h1`
+  color: var(--text);
+  font-size: 2rem;
+`;
+
+export const LojasTitleWrapper = styled.div`
+  width: 100%;
 `;

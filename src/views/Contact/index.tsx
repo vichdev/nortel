@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import BannerButton from "../../components/BannerButton";
 import Footer from "../../components/Footer";
 import ScreenBanners from "../../components/ScreenBanners";
 import banner_contato from "../../assets/ProductsBanner/productbanner_2.jpg";
-import { FaAngleDoubleLeft } from "react-icons/fa";
 import Header from "../../components/Header";
-import { FaWhatsapp } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaMapMarkerAlt,
+  FaAngleDoubleRight,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { MdEmail, MdPhone } from "react-icons/md";
 import * as Styles from "./styles";
+import shopee from "../../assets/lojas/shopee.svg";
+import mercado_livre from "../../assets/lojas/mercado_livre.svg";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import WhatsApp from "../../components/WhatsApp";
+import ButtonToTop from "../../components/ButtonToTop";
 
 const Contact: React.FC = () => {
+  const [message, setMessage] = useState<string>("");
+  const [emailSucess, setEmailSucess] = useState<boolean>(null);
+
   const {
     handleSubmit,
     register,
@@ -28,13 +41,17 @@ const Contact: React.FC = () => {
       )
       .then(
         function (response) {
-          console.log("SUCCESS!", response.status, response.text);
+          setMessage("E-mail enviado com sucesso.");
+          setEmailSucess(true);
         },
         function (error) {
-          console.log("FAILED...", error.text);
+          setMessage("Não foi possível enviar o email.");
+          setEmailSucess(false);
         }
       );
+    setMessage("");
   };
+
   return (
     <>
       <Header />
@@ -44,7 +61,7 @@ const Contact: React.FC = () => {
         img={banner_contato}
       >
         <BannerButton title="Home" to="/" />
-        <FaAngleDoubleLeft />
+        <FaAngleDoubleRight />
         <BannerButton title="Contato" to="/contact" toggleUnderline />
       </ScreenBanners>
       <Styles.ContactWrapper>
@@ -132,36 +149,102 @@ const Contact: React.FC = () => {
                   title="Enviar mensagem"
                   value="Enviar Mensagem"
                 />
+                <Styles.EmailErrorMessage isErro={emailSucess}>
+                  {message}
+                </Styles.EmailErrorMessage>
               </Styles.FormButtonWrapper>
             </Styles.FormContainer>
           </Styles.FormWrapper>
           <Styles.InformationWrapper>
-            <Styles.InformationTitle>Nossos contatos</Styles.InformationTitle>
+            <Styles.LojasTitleWrapper>
+              <Styles.LojasTitle>Informações para contato </Styles.LojasTitle>
+            </Styles.LojasTitleWrapper>
             <Styles.InformationContainer>
-              <Styles.InformationTitle>Endereço</Styles.InformationTitle>
-              <Styles.InformationDescription>
-                R. São Miguel dos Campos, 29 - Valéria, Salvador - BA, 41301-360
-              </Styles.InformationDescription>
+              <Styles.IconWrapper>
+                <FaMapMarkerAlt />
+              </Styles.IconWrapper>
+              <Styles.InformationContent>
+                <Styles.InformationTitle>Localização</Styles.InformationTitle>
+                <Styles.InformationDescription>
+                  Salvador - BA, 41301-360
+                </Styles.InformationDescription>
+              </Styles.InformationContent>
             </Styles.InformationContainer>
             <Styles.InformationContainer>
-              <Styles.InformationTitle>E-mail</Styles.InformationTitle>
-              <Styles.InformationDescription>
-                <MdEmail /> sabonetes.nortel@gmail.com
-              </Styles.InformationDescription>
+              <Styles.IconWrapper>
+                <MdEmail />
+              </Styles.IconWrapper>
+              <Styles.InformationContent>
+                <Styles.InformationTitle>Email</Styles.InformationTitle>
+                <Styles.InformationDescription>
+                  sabonetes.nortel@gmail.com
+                </Styles.InformationDescription>
+              </Styles.InformationContent>
             </Styles.InformationContainer>
             <Styles.InformationContainer>
-              <Styles.InformationTitle>Telefones</Styles.InformationTitle>
-              <Styles.InformationDescription>
-                <MdPhone /> +55 (71) 3301-7719
-              </Styles.InformationDescription>
-              <Styles.InformationDescription>
-                <FaWhatsapp /> +55 (71) 3301-7719
-              </Styles.InformationDescription>
+              <Styles.IconWrapper>
+                <MdPhone />
+              </Styles.IconWrapper>
+              <Styles.InformationContent>
+                <Styles.InformationTitle>Telefone</Styles.InformationTitle>
+                <Styles.InformationDescription>
+                  +55 (71) 3301-7719
+                </Styles.InformationDescription>
+              </Styles.InformationContent>
             </Styles.InformationContainer>
+            <Styles.InformationContainer>
+              <Styles.IconWrapper>
+                <FaWhatsapp />
+              </Styles.IconWrapper>
+              <Styles.InformationContent>
+                <Styles.InformationTitle>WhatsApp</Styles.InformationTitle>
+                <Styles.InformationDescription>
+                  +55 (71) 3301-7719
+                </Styles.InformationDescription>
+              </Styles.InformationContent>
+            </Styles.InformationContainer>
+            <Styles.LojasTitleWrapper>
+              <Styles.LojasTitle>Nos encontre em</Styles.LojasTitle>
+            </Styles.LojasTitleWrapper>
+            <Styles.LojasWrapper>
+              <Styles.LojasLink href="https://www.mercadolivre.com.br/perfil/NORTELNORTEL20220717153637">
+                <Styles.LojasImg
+                  src={mercado_livre}
+                  alt="Link para acesso a loja do mercado livre."
+                />
+              </Styles.LojasLink>
+              <Styles.LojasLink href="https://shopee.com.br/?gclid=CjwKCAjwrNmWBhA4EiwAHbjEQDY3_-yIOrnBTZPT8sWlmysKHpZez4ELAPlWUJTZ97B202RXrni4pBoCMMUQAvD_BwE">
+                <Styles.LojasImg
+                  src={shopee}
+                  alt="Link para acesso a loja da shopee."
+                />
+              </Styles.LojasLink>
+              <Styles.LojasLink
+                href="https://www.facebook.com/sabonetesnortel"
+                title="Link de acesso ao facebook da nortel."
+              >
+                <FaFacebook color="#395692" />
+              </Styles.LojasLink>
+              <Styles.LojasLink
+                href="https://www.instagram.com/sabonetesnortel/"
+                title="Link de acesso ao instagram da nortel."
+                setBackground
+              >
+                <FaInstagram color="white" />
+              </Styles.LojasLink>
+              <Styles.LojasLink
+                href="https://www.linkedin.com/in/nortel-sabonetes-59b328116/?originalSubdomain=br"
+                title="Link de acesso ao linkedin da nortel."
+              >
+                <FaLinkedinIn color="#0a63bc" />
+              </Styles.LojasLink>
+            </Styles.LojasWrapper>
           </Styles.InformationWrapper>
         </Styles.ContactContainer>
       </Styles.ContactWrapper>
       <Footer />
+      <WhatsApp />
+      <ButtonToTop />
     </>
   );
 };

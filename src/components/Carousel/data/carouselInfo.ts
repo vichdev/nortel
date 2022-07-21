@@ -2,23 +2,32 @@ import { ICarouselInfo } from "../interfaces/ICarouselInfo";
 
 export const carouselInfo: ICarouselInfo[] = [
   {
-    titulo: "Produtos Veterinarios",
-    texto: "Produtos veterinarios de qualidade para seu pet",
-    path: "Carousel_img1",
+    titulo: "Linha Veterinária",
+    texto: "Produtos veterinários de qualidade para seu pet.",
+    path: "productbanner_1",
+    route: "produtos/veterinarios",
+    title: "Saiba mais sobre os produtos veterinários",
   },
   {
-    titulo: "Produtos de Hotelaria",
-    texto: "Produtos veterinarios de qualidade para seu pet",
-    path: "Carousel_img2",
+    titulo: "Linha Hotelaria",
+    texto: "Shampoos, sabonetes, personalizados ou não, para seu negócio.",
+    path: "productbanner_2",
+    route: "/produtos/hotelaria",
+    title: "Saiba mais sobre os produtos de hotelaria",
   },
   {
-    titulo: "Produtos Amenities",
+    titulo: "Linha Fitoterápica",
     texto: "Produtos veterinarios de qualidade para seu pet",
-    path: "Carousel_img3",
+    path: "productbanner_3",
+    route: "/produtos/fitoterapicos",
+    title: "Saiba mais sobre os produtos fitoterápicos",
   },
   {
-    titulo: "Produtos para seu Negócio",
-    texto: "Produtos veterinarios de qualidade para seu pet",
-    path: "Carousel_img4",
+    titulo: "Personalize para seu Negócio",
+    texto:
+      "Produtos personalizados, para o seu hotel, pousada ou loja escolhidos a dedo por você.",
+    path: "productbanner_4",
+    route: "/produtos/personalizados",
+    title: "Saiba mais sobre como personalizar seu produto",
   },
 ];
