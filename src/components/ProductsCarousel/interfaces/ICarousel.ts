@@ -1,5 +1,7 @@
 export interface ICarousel {
   produtos: Array<ICarouselData>;
+  title: string;
+  descricao: string;
 }
 
 export interface ICarouselData {

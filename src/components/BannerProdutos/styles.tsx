@@ -52,6 +52,10 @@ export const Product = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 50rem;
+  a {
+    width: 100%;
+    max-width: 60%;
+  }
 `;
 
 export const ProductInfoWrapper = styled.div`
@@ -78,5 +82,5 @@ export const ProductTitle = styled.h1``;
 export const ProductDescription = styled.span``;
 
 export const ProductsButton = styled(Button)`
-  max-width: 60%;
+  max-width: 100%;
 `;

@@ -9,40 +9,55 @@ import * as Styles from "./styles";
 
 SwiperCore.use([Navigation, Pagination]);
 
-const ProductsCarousel: React.FC<ICarousel> = ({ produtos }) => {
+const ProductsCarousel: React.FC<ICarousel> = ({
+  produtos,
+  title,
+  descricao,
+}) => {
   return (
-    <Swiper
-      navigation
-      pagination
-      slidesPerView={1}
-      style={{
-        width: "100%",
-        display: "flex",
-        padding: "1rem",
-        height: "30rem",
-      }}
-      className="carouselProduto"
-    >
-      {produtos.map((item, index) => {
-        return (
-          <SwiperSlide key={index} style={{ display: "flex" }}>
-            <Styles.ProductsCarouselContainer key={index}>
-              <Styles.ImgWrapper>
-                <Styles.ProductsCarouselImg src={item.foto} alt={item.alt} />
-              </Styles.ImgWrapper>
-              <Styles.DescriptionWrapper>
-                <Styles.ProductsCarouselTitle>
-                  {item.titulo}
-                </Styles.ProductsCarouselTitle>
-                <Styles.ProductsCarouselDescription>
-                  {item.descricao}
-                </Styles.ProductsCarouselDescription>
-              </Styles.DescriptionWrapper>
-            </Styles.ProductsCarouselContainer>
-          </SwiperSlide>
-        );
-      })}
-    </Swiper>
+    <>
+      <Styles.TitleWrapper>
+        <Styles.ProductsCarouselTitle>{title}</Styles.ProductsCarouselTitle>
+        <Styles.ProductsCarouselDescription>
+          {descricao}
+        </Styles.ProductsCarouselDescription>
+      </Styles.TitleWrapper>
+      <Swiper
+        navigation
+        pagination
+        slidesPerView={3}
+        slidesPerGroup={3}
+        autoplay={{ delay: 3000 }}
+        effect={"slide"}
+        style={{
+          width: "100%",
+          display: "flex",
+          padding: "1rem",
+          height: "30rem",
+        }}
+        className="carouselProduto"
+      >
+        {produtos.map((item, index) => {
+          return (
+            <SwiperSlide key={index} style={{ display: "flex" }}>
+              <Styles.ProductsCarouselContainer key={index}>
+                <Styles.ImgWrapper>
+                  <Styles.ProductsCarouselImg src={item.foto} alt={item.alt} />
+                </Styles.ImgWrapper>
+                <Styles.DescriptionWrapper>
+                  <Styles.ProductsCarouselTitle>
+                    {item.titulo}
+                  </Styles.ProductsCarouselTitle>
+                  <Styles.ProductsCarouselDescription>
+                    {item.descricao}
+                  </Styles.ProductsCarouselDescription>
+                </Styles.DescriptionWrapper>
+              </Styles.ProductsCarouselContainer>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    </>
   );
 };
 

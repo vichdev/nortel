@@ -18,6 +18,15 @@ export const ProductsCarouselDescription = styled.span`
   font-size: 1rem;
 `;
 
+export const TitleWrapper = styled.div`
+  width: 100%;
+  font-size: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+`;
+
 export const ProductsCarouselImg = styled.img`
   width: 100%;
   height: 100%;

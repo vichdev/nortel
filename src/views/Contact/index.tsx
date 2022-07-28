@@ -55,15 +55,7 @@ const Contact: React.FC = () => {
   return (
     <>
       <Header />
-      <ScreenBanners
-        title="Podemos ajudar?"
-        description="É um prazer poder tirar suas dúvidas!"
-        img={banner_contato}
-      >
-        <BannerButton title="Home" to="/" />
-        <FaAngleDoubleRight />
-        <BannerButton title="Contato" to="/contact" toggleUnderline />
-      </ScreenBanners>
+      <ScreenBanners title="Podemos ajudar?" img={banner_contato} />
       <Styles.ContactWrapper>
         <Styles.ContactContainer>
           <Styles.FormWrapper>

@@ -8,8 +8,9 @@ import { BiHappyBeaming } from "react-icons/bi";
 const BannerQualitys: React.FC = () => {
   const [animation, setAnimation] = useState<boolean>(false);
 
-  useEffect(() => {
-    const handleAnimation = () => {
+  //@ts-ignore
+  useEffect((): void => {
+    const handleAnimation = (): void => {
       return window.scrollY >= 1300
         ? setAnimation(!animation)
         : setAnimation(false);

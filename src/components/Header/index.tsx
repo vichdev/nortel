@@ -39,7 +39,7 @@ const Header: React.FC = () => {
               <Styles.NavBar>
                 <Link to={"/about-us"} style={{ textDecoration: "none" }}>
                   <Styles.NavBarLink isScrolled={shrink}>
-                    Sobre Nós
+                    Sobre nós
                   </Styles.NavBarLink>
                 </Link>
               </Styles.NavBar>
@@ -90,7 +90,7 @@ const Header: React.FC = () => {
               <Styles.NavBar>
                 <Link to={"/about-us"} style={{ textDecoration: "none" }}>
                   <Styles.NavBarLink isScrolled={true}>
-                    Sobre Nós
+                    Sobre nós
                   </Styles.NavBarLink>
                 </Link>
               </Styles.NavBar>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as Styles from "./styles";
 
 interface IProduto {
@@ -6,6 +7,7 @@ interface IProduto {
   description: string;
   alt: string;
   imagePath: string;
+  route: string;
 }
 
 const Banner: React.FC = () => {
@@ -15,18 +17,21 @@ const Banner: React.FC = () => {
       description: "O melhor produto para seu Pet.",
       alt: "Imagem de um produto veterinário representando a linha veterinária.",
       imagePath: "productbanner_5.jpg",
+      route: "/produtos/veterinarios",
     },
     {
       title: "Hotelaria",
       description: "O melhor produto para seu negócio.",
       alt: "Imagem de um produto para hotéis e negócios representando a linha de hotelaria.",
       imagePath: "productbanner_7.jpg",
+      route: "/produtos/hotelaria",
     },
     {
       title: "Fitoterápicos",
       description: "O melhor produto para você.",
       alt: "Imagem de um produto fitoterápico representando a linha fitoterápica.",
       imagePath: "productbanner_6.jpg",
+      route: "/produtos/fitoterapicos",
     },
   ];
 
@@ -57,9 +62,13 @@ const Banner: React.FC = () => {
                     {item.description}
                   </Styles.ProductDescription>
                 </Styles.ProductInfoWrapper>
-                <Styles.ProductsButton title="Saiba Mais">
-                  Saiba Mais
-                </Styles.ProductsButton>
+                <Link to={item.route}>
+                  <Styles.ProductsButton
+                    title={`Saiba Mais sobre ${item.title}`}
+                  >
+                    Saiba Mais
+                  </Styles.ProductsButton>
+                </Link>
               </Styles.Product>
             );
           })}

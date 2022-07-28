@@ -20,15 +20,8 @@ const Produtos: React.FC = () => {
   return (
     <>
       <Header />
-      <ScreenBanners
-        title="Produtos"
-        description="Conheça todas nossas opções para seu negócio!"
-        img={banner}
-      >
-        <BannerButton title="Home" to="/" />
-        <FaAngleDoubleRight />
-        <BannerButton title="Produtos" to="/produtos" toggleUnderline={true} />
-      </ScreenBanners>
+      <ScreenBanners title="Produtos" img={banner} />
+
       <Styles.ProductsWrapper>
         <div>
           <h1>Conheça todas nossas linhas</h1>
