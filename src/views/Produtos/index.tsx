@@ -1,13 +1,10 @@
 import React from "react";
 import Header from "../../components/Header";
 import ScreenBanners from "../../components/ScreenBanners";
-import { FaAngleDoubleRight } from "react-icons/fa";
 import banner from "../../assets/banner_produtos.jpg";
 import { productsList } from "./data/ProductsList";
-
 import * as Styles from "./styles";
 import Footer from "../../components/Footer";
-import BannerButton from "../../components/BannerButton";
 import { Link } from "react-router-dom";
 import WhatsApp from "../../components/WhatsApp";
 import ButtonToTop from "../../components/ButtonToTop";
