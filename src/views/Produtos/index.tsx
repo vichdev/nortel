@@ -21,15 +21,13 @@ const Produtos: React.FC = () => {
     <>
       <Header />
       <ScreenBanners title="Produtos" img={banner} />
-
       <Styles.ProductsWrapper>
-        <div>
-          <h1>Conheça todas nossas linhas</h1>
-          <span>
-            Cada produto oferecidos em nosso portfólio deve funcionar, ser
-            sustentável, seguro e agradável.
-          </span>
-        </div>
+        <Styles.TitlePageWrapper>
+          <Styles.TitlePage>Conheça todas nossas linhas</Styles.TitlePage>
+          <Styles.DescriptionPage>
+            Dê uma olhada em cada uma de nossas linhas e visite nosso portfolio!
+          </Styles.DescriptionPage>
+        </Styles.TitlePageWrapper>
         <Styles.ProductsContainer>
           {productsList.map((item, index) => {
             return (

@@ -9,27 +9,27 @@ interface IProducts {
 export const productsList: Array<IProducts> = [
   {
     img: "productbanner_1.jpg",
-    title: "Veterinários",
-    description: "",
+    title: "Veterinária",
+    description: "Produtos para seu pet.",
     route: "/produtos/veterinarios",
     alt: "Produtos veterinários",
   },
   {
     img: "productbanner_2.jpg",
     title: "Hotelaria",
-    description: "",
+    description: "Produtos para seu negócio.",
     route: "/produtos/hotelaria",
     alt: "Produtos Hotelaria",
   },
   {
     img: "productbanner_3.jpg",
-    title: "Fitoterápicos",
-    description: "",
+    title: "Fitoterápica",
+    description: "Produtos para você.",
     route: "/produtos/fitoterapicos",
     alt: "Produtos Fitoterápicos",
   },
   {
-    img: "productbanner_1.jpg",
+    img: "productbanner_5.jpg",
     title: "Personalizados",
     description: "Personalize seu kit.",
     route: "/produtos/personalize",
