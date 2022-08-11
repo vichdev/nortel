@@ -8,6 +8,9 @@ import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 import WhatsApp from "../../components/WhatsApp";
 import ButtonToTop from "../../components/ButtonToTop";
+import ProductsPages from "../../components/ProductsPages";
+import image from "../../assets/ProductsBanner/productbanner_1.jpg";
+import image_banner from "../../assets/banner_about_us.jpg";
 
 const Produtos: React.FC = () => {
   function getImageByPath(image: string): string {
@@ -49,8 +52,15 @@ const Produtos: React.FC = () => {
           })}
         </Styles.ProductsContainer>
       </Styles.ProductsWrapper>
+      <ScreenBanners
+        img={image_banner}
+        title="Gostou de nossos produtos e ficou interessado?"
+        center
+        displayButton
+        link="https://lista.mercadolivre.com.br/_CustId_1162392719"
+        buttonTitle="Visite nossa loja"
+      />
       <Footer />
-      <WhatsApp />
       <ButtonToTop />
     </>
   );

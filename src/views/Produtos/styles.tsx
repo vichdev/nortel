@@ -3,15 +3,15 @@ import { Button } from "../../components/Button/styles";
 
 export const ProductsWrapper = styled.div`
   width: 100%;
-  height: 50rem;
-  max-height: 35rem;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 2rem;
   max-width: 80%;
   padding: 1rem;
+  margin-bottom: 10rem;
 `;
 
 export const ProductsContainer = styled.div`
@@ -19,7 +19,9 @@ export const ProductsContainer = styled.div`
   display: flex;
   height: 100%;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  row-gap: 3rem;
 `;
 
 export const ProductImgWrapper = styled.div`
@@ -50,7 +52,7 @@ export const ProductsContent = styled.div`
   -webkit-box-shadow: -1px -1px 20px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: -1px -1px 20px 0px rgba(0, 0, 0, 0.2);
   box-shadow: -1px -1px 20px 0px rgba(0, 0, 0, 0.2);
-  gap: 2rem;
+  gap: 1rem;
   &:hover {
     transform: scale(1.2);
   }
@@ -74,6 +76,7 @@ export const DescriptionPage = styled.span``;
 
 export const TitlePageWrapper = styled.div`
   margin-bottom: 2rem;
+  text-align: center;
 `;
 
 export const BannerButton = styled(Button)``;

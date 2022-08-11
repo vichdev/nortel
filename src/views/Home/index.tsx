@@ -18,7 +18,6 @@ const Home: React.FC = () => {
       <BannerQualitys />
       <Footer />
       <ButtonToTop />
-      <WhatsApp />
     </>
   );
 };

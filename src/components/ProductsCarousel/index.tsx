@@ -13,11 +13,12 @@ const ProductsCarousel: React.FC<ICarousel> = ({
   produtos,
   title,
   descricao,
+  slidesPerView = 3,
 }) => {
   return (
     <>
       <Styles.TitleWrapper>
-        <Styles.ProductsCarouselTitle>{title}</Styles.ProductsCarouselTitle>
+        <Styles.Title>{title}</Styles.Title>
         <Styles.ProductsCarouselDescription>
           {descricao}
         </Styles.ProductsCarouselDescription>
@@ -25,8 +26,8 @@ const ProductsCarousel: React.FC<ICarousel> = ({
       <Swiper
         navigation
         pagination
-        slidesPerView={3}
-        slidesPerGroup={3}
+        slidesPerView={slidesPerView}
+        slidesPerGroup={slidesPerView}
         autoplay={{ delay: 3000 }}
         effect={"slide"}
         style={{

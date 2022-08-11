@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import * as Styles from "./styles";
 import banner from "../../assets/banner_quality.jpg";
-import { FaLeaf } from "react-icons/fa";
-import { BsBookmarkStar, BsBoxSeam } from "react-icons/bs";
-import { BiHappyBeaming } from "react-icons/bi";
-
+import { FaLeaf, FaShippingFast } from "react-icons/fa";
+import { BsBookmarkStar } from "react-icons/bs";
+import { MdCrueltyFree } from "react-icons/md";
 const BannerQualitys: React.FC = () => {
   const [animation, setAnimation] = useState<boolean>(false);
 
@@ -31,10 +30,8 @@ const BannerQualitys: React.FC = () => {
               Sustentabilidade
             </Styles.BannerInformationTitle>
             <Styles.BannerInformationContent>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              non ante rutrum, posuere tortor quis, semper neque. Aliquam vel
-              tristique ipsum. In lacinia tellus sed orci rutrum, a malesuada
-              magna.
+              Embalagens feitas com materiais reciclados, focando na preservação
+              e redução do lixo. Matérias-primas biodegradável.
             </Styles.BannerInformationContent>
           </Styles.BannerInformationContainer>
           <Styles.BannerInformationContainer>
@@ -43,34 +40,30 @@ const BannerQualitys: React.FC = () => {
               Qualidade
             </Styles.BannerInformationTitle>
             <Styles.BannerInformationContent>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              non ante rutrum, posuere tortor quis, semper neque. Aliquam vel
-              tristique ipsum. In lacinia tellus sed orci rutrum, a malesuada
-              magna.
+              Qualidade comprovada por mais de 20 anos no mercado hoteleiro e
+              veterinário, focando sempre na melhor matéria prima para garantir
+              a satisfação de nossos clientes.
             </Styles.BannerInformationContent>
           </Styles.BannerInformationContainer>
           <Styles.BannerInformationContainer>
-            <BsBoxSeam />
+            <FaShippingFast />
             <Styles.BannerInformationTitle>
               Logística
             </Styles.BannerInformationTitle>
             <Styles.BannerInformationContent>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              non ante rutrum, posuere tortor quis, semper neque. Aliquam vel
-              tristique ipsum. In lacinia tellus sed orci rutrum, a malesuada
-              magna.
+              Atendimento totalmente personalizado, focando nas necessidades e
+              satisfação dos nossos clientes, entregamos independente do local
+              ou horário.
             </Styles.BannerInformationContent>
           </Styles.BannerInformationContainer>
           <Styles.BannerInformationContainer>
-            <BiHappyBeaming />
+            <MdCrueltyFree />
             <Styles.BannerInformationTitle>
-              Clientes Satisfeitos
+              Cruelty free
             </Styles.BannerInformationTitle>
             <Styles.BannerInformationContent>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              non ante rutrum, posuere tortor quis, semper neque. Aliquam vel
-              tristique ipsum. In lacinia tellus sed orci rutrum, a malesuada
-              magna.
+              Não realizamos testes, nem crueldade com animais no
+              desenvolvimento de nosssos produtos.
             </Styles.BannerInformationContent>
           </Styles.BannerInformationContainer>
         </Styles.BannerInformationWrapper>

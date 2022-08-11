@@ -8,13 +8,13 @@ export const ProductsCarouselWrapper = styled.div`
 `;
 
 export const ProductsCarouselTitle = styled.h1`
-  color: #000;
-  font-size: 2rem;
+  color: var(--text);
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 `;
 
 export const ProductsCarouselDescription = styled.span`
-  color: #000;
+  color: var(--text);
   font-size: 1rem;
 `;
 
@@ -24,7 +24,12 @@ export const TitleWrapper = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
+
   flex-direction: column;
+`;
+
+export const Title = styled.h1`
+  font-size: 2rem;
 `;
 
 export const ProductsCarouselImg = styled.img`

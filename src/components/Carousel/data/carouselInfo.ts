@@ -9,7 +9,7 @@ export const carouselInfo: ICarouselInfo[] = [
     title: "Saiba mais sobre os produtos veterinários",
   },
   {
-    titulo: "Linha Hotelaria",
+    titulo: "Linha Hoteleira",
     texto: "Shampoos, sabonetes, personalizados ou não, para seu negócio.",
     path: "productbanner_2",
     route: "/produtos/hotelaria",
@@ -18,7 +18,7 @@ export const carouselInfo: ICarouselInfo[] = [
   {
     titulo: "Linha Fitoterápica",
     texto: "Produtos veterinarios de qualidade para seu pet",
-    path: "productbanner_3",
+    path: "aroeira",
     route: "/produtos/fitoterapicos",
     title: "Saiba mais sobre os produtos fitoterápicos",
   },
@@ -27,7 +27,7 @@ export const carouselInfo: ICarouselInfo[] = [
     texto:
       "Produtos personalizados, para o seu hotel, pousada ou loja escolhidos a dedo por você.",
     path: "productbanner_4",
-    route: "/produtos/personalizados",
+    route: "/produtos/personalize",
     title: "Saiba mais sobre como personalizar seu produto",
   },
 ];

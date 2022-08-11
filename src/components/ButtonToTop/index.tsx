@@ -7,7 +7,7 @@ const ButtonToTop: React.FC = () => {
 
   useEffect(() => {
     const displayButton = (): void => {
-      return window.scrollY >= 800
+      return window.scrollY >= 700
         ? setShowButton(!showButton)
         : setShowButton(false);
     };

@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                 <Link to={"/produtos"}>Produtos</Link>
               </Styles.FooterNavBarLink>
               <Styles.FooterNavBarLink>
-                <Link to={"/contacts"}>Contato</Link>
+                <Link to={"/contact"}>Contato</Link>
               </Styles.FooterNavBarLink>
             </Styles.FooterNavBar>
             <Styles.FooterNavBar>

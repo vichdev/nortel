@@ -34,9 +34,9 @@ export const BannerImgWrapper = styled.div<{ doAnimation: boolean }>`
 
 export const BannerImg = styled.img`
   width: 100%;
-  max-width: 600px;
+  max-width: 37.5rem;
   object-fit: cover;
-  height: 700px;
+  height: 43.75rem;
 `;
 
 export const BannerInformationWrapper = styled.div<{ doAnimation: boolean }>`
@@ -59,16 +59,16 @@ export const BannerInformationWrapper = styled.div<{ doAnimation: boolean }>`
 export const BannerInformationContainer = styled.div`
   display: flex;
   flex-direction: column;
-
   align-items: center;
-  justify-content: space-between;
   text-align: center;
   width: 250px;
-  height: 250px;
+  gap: 1rem;
+  height: 15rem;
   background-color: white;
+  color: var(--text);
   svg {
     font-size: 3rem;
-    color: #f0ce0fee;
+    color: #c89211;
   }
 `;
 
@@ -77,4 +77,6 @@ export const BannerInformationTitle = styled.span`
   font-weight: 600;
 `;
 
-export const BannerInformationContent = styled.span``;
+export const BannerInformationContent = styled.span`
+  color: var(--text);
+`;

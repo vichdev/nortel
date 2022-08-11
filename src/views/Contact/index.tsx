@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import BannerButton from "../../components/BannerButton";
 import Footer from "../../components/Footer";
 import ScreenBanners from "../../components/ScreenBanners";
 import banner_contato from "../../assets/ProductsBanner/productbanner_2.jpg";
@@ -7,7 +6,6 @@ import Header from "../../components/Header";
 import {
   FaWhatsapp,
   FaMapMarkerAlt,
-  FaAngleDoubleRight,
   FaFacebook,
   FaInstagram,
   FaLinkedinIn,
@@ -18,7 +16,6 @@ import shopee from "../../assets/lojas/shopee.svg";
 import mercado_livre from "../../assets/lojas/mercado_livre.svg";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import WhatsApp from "../../components/WhatsApp";
 import ButtonToTop from "../../components/ButtonToTop";
 
 const Contact: React.FC = () => {
@@ -39,16 +36,20 @@ const Contact: React.FC = () => {
         "#form_contato",
         "YDsDi4Bi4rd8HJxTF"
       )
-      .then(
-        function (response) {
-          setMessage("E-mail enviado com sucesso.");
-          setEmailSucess(true);
-        },
-        function (error) {
-          setMessage("Não foi possível enviar o email.");
-          setEmailSucess(false);
-        }
-      );
+      .then(function (response) {
+        setMessage("E-mail enviado com sucesso.");
+        setEmailSucess(true);
+        setTimeout(() => {
+          setMessage("");
+        }, 2000);
+      })
+      .catch(function (error) {
+        setMessage("Não foi possível enviar o email.");
+        setEmailSucess(false);
+        setTimeout(() => {
+          setMessage("");
+        }, 2000);
+      });
     setMessage("");
   };
 
@@ -235,7 +236,6 @@ const Contact: React.FC = () => {
         </Styles.ContactContainer>
       </Styles.ContactWrapper>
       <Footer />
-      <WhatsApp />
       <ButtonToTop />
     </>
   );
