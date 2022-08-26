@@ -36,12 +36,6 @@ const items: Array<IProdutosVeterinarios> = [
     foto: `${produto4}`,
     alt: "foto 1",
   },
-  {
-    titulo: "Totó 4",
-    descricao: "PRODUTO DESCRICAO",
-    foto: `${produto5}`,
-    alt: "foto 1",
-  },
 ];
 
 export default items;
