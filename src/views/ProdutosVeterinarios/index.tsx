@@ -18,13 +18,12 @@ const ProdutosVeterinarios: React.FC = () => {
         link="https://lista.mercadolivre.com.br/_CustId_1162392719"
       />
       <ProductsPages image={productbanner_1}>
-        Há quinze anos lançamos nossa linha ToTó de produtos veterinários com
-        grande aceitação pelas suas formulações balanceadas e com produtos de
-        origem natural, como: <b>Nim</b>, <b>Coco</b>, <b>Aroeira</b>,{" "}
-        <b>Alcatrão</b>, <b>Enxofre</b> garantindo sua eficácia no uso diário
-        para cães e gatos. Uma linha completa de cuidados e proteção para seu
-        pet. Incluindo, sabonetes, shampoos, condicionadores, talcos, colônias,
-        eliminador de odores. <br /> <br />
+        Nossa linha de produtos veterinários Totó foi criada pensando nos
+        cuidados com a saúde , higiene e bem estar de nossos pets, sejam eles
+        filhotes ou adultos. Com composições a base de óleo orgânico de nim ,
+        cipermetrina ,Extrato de Aroeira, Enxofre, óleo de coco , dentre outras
+        Nossa linha é composta de shampoos, sabonetes, talco, colônia e
+        eliminador de odores.
       </ProductsPages>
       <ProductsCarousel
         produtos={items}

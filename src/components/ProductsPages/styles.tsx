@@ -3,7 +3,6 @@ import { Button } from "../Button/styles";
 
 export const Wrapper = styled.div`
   width: 100vw;
-  height: 70vh;
   padding: 2rem;
   margin-bottom: 5rem;
 `;
@@ -37,7 +36,7 @@ export const Info = styled.span`
 `;
 
 export const ButtonBuyNow = styled(Button)`
-  width: 30%;
+  width: 10rem;
   &:hover {
     filter: opacity(0.9);
   }

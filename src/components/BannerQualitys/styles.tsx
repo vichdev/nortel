@@ -13,7 +13,7 @@ to {opacity: 1; left: 0  }
 
 export const BannerWrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  padding: 5rem;
 `;
 
 export const BannerContainer = styled.div`
@@ -46,7 +46,7 @@ export const BannerInformationWrapper = styled.div<{ doAnimation: boolean }>`
   width: 100%;
   max-width: 600px;
   height: 100%;
-  max-height: 700px;
+  min-height: 700px;
   opacity: 0;
   position: relative;
   box-shadow: 20px 15px 20px 15px whitesmoke;

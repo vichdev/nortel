@@ -37,6 +37,7 @@ export const ProductsContainer = styled.div`
   width: 100%;
   height: 100%;
   align-items: center;
+  gap: 1rem;
   justify-content: space-around;
 `;
 
@@ -44,7 +45,6 @@ export const Product = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  width: 25%;
   background-color: white;
   animation-name: ${ProductAnimation};
   animation-duration: 1.5s;

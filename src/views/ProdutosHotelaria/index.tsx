@@ -17,12 +17,11 @@ const ProdutosHotelaria: React.FC = () => {
         image={productbanner_1}
         link="https://lista.mercadolivre.com.br/_CustId_1162392719"
       >
-        Hoteleira foi a primeira linha desenvolvida pela Nortel para atender as
-        necessidades do nosso estado que tem como grande força o turismo, assim
-        devolvendo sabonetes e shampoo de grande qualidade tendo como base da
-        massa de seus sabonetes feita com glicerina e muita qualidade. Ela
-        também pode ser estilizada seguindo as necessidades e pedidos dos nosso
-        clientes.
+        Atendemos hotéis, pousadas, motéis, hospitais com sabonetes de 10g a 40g
+        personalizados ou não, oferecendo as mais diversas fragrâncias de acordo
+        com a preferência de cada cliente. Dispomos de shampoo e condicionar 2x1
+        em embalagem personalizada de 30 ml e touca para banho descartável
+        plástica transparente embalada individualmente.
       </ProductsPages>
       <ProductsCarousel
         produtos={items}

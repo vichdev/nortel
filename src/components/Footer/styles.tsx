@@ -136,7 +136,6 @@ export const FooterCopyrightContainer = styled.div`
 `;
 
 export const SocialMediasContainer = styled.div`
-  width: 10%;
   height: 20%;
   display: flex;
   align-items: center;
@@ -170,6 +169,10 @@ export const FooterNavBarWrapper = styled.div`
   width: 100%;
   padding: 1rem;
   justify-content: space-around;
+
+  @media (max-width: 976px) {
+    display: none;
+  }
 `;
 
 export const FooterNavBar = styled.div`
@@ -208,7 +211,5 @@ export const Divider = styled.hr`
 
 export const Maps = styled.iframe`
   border: none;
-  width: 100%;
-  height: 100%;
   padding: 1rem;
 `;

@@ -15,18 +15,15 @@ const AboutUs: React.FC = () => {
         <Styles.InfoWrapper>
           <Styles.InfoTitle>Quem somos</Styles.InfoTitle>
           <Styles.InfoDescription>
-            Uma empresa nascida na Bahia há mais de vinte anos se originando no
-            mercado de produtos de higiene para hotelaria, sempre focando na
-            qualidade e no melhor aproveitamento de seus produtos. <br />
-            <br />
-            Pela qualidade de nossos produtos, conseguimos nos estabelecer no
-            mercado e nos expandir, criando a linha de produtos fitoterápicos e
-            veterinários com grande aceitação pelas suas formulações balanceadas
-            e eficientes no seu uso diário para cães e gatos. <br /> <br />
-            Sempre se destacou pela qualidade e atendimento, além do respeito a
-            suas origens e seus colaboradores, seguindo essa ideia, acreditamos
-            que todos podem ter acesso a produtos de qualidade com valores
-            acessiveís a toda comunidade.
+            Com 19 anos de historia, a Nortel surgiu para atender a demanda da
+            rede hoteleira baiana, mas que ao longo desse tempo expandiu-se para
+            outras regiões do nosso Brasil. Decidimos sair dos quartos dos
+            hotéis e ingressamos também na linha de sabonetes fitoterápicos,
+            valorizando nossas riquezas naturais, investindo em sabonetes a base
+            da Aroeira, do Enxofre Medicinal, do Açaí e da Menta. Mas faltava
+            algum personagem na nossa trajetória e então decidimos produzir
+            nossa linha veterinária, a qual demos o nome carinhoso de Totó, para
+            refletir todo nosso amor e carinho aos nossos amigos de 4 patas.
           </Styles.InfoDescription>
         </Styles.InfoWrapper>
         <Styles.InfoWrapper>

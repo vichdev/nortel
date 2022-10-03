@@ -1,21 +1,20 @@
 import styled from "styled-components";
-import { Button } from "../../components/Button/styles";
 
 export const ContactWrapper = styled.div`
   width: 100%;
-  height: 50rem;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  padding: 1rem;
+  justify-content: space-around;
+  padding: 3rem;
   align-items: center;
 `;
 
 export const ContactContainer = styled.div`
   width: 100%;
-  height: 90%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  gap: 3rem;
 `;
 
 //Forms
@@ -132,10 +131,10 @@ export const InformationWrapper = styled.div`
   width: 100%;
   height: 100%;
   max-width: 40rem;
+  gap: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
 `;
 
 export const InformationContainer = styled.div`

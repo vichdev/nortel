@@ -17,13 +17,12 @@ const ProdutosFitoterapicos: React.FC = () => {
         image={productbanner_1}
         link="https://lista.mercadolivre.com.br/_CustId_1162392719"
       >
-        A linha fitoterápica veio de uma grande inspiração e amor pelos produtos
-        naturais do nosso país, a primeira grande percepção veio da{" "}
-        <b>Aroeira</b>, planta com grandes benefícios à nossa saúde, logo após o{" "}
-        <b>Enxofre</b> que ajuda na cicatrização e limpeza de nossa pele,
-        ajudando também nas reduções de espinhas e manchas, e logo mais o{" "}
-        <b>Nim</b>. Demais produtos focando sempre no cuidado e as melhorias que
-        seu uso traz à nossa pele e saúde.
+        Pensando em oferecer aos nossos clientes um cuidado especial com sua
+        pele, dispomos de uma linha de sabonetes fitoterápicos de 80g a 100g á
+        base de produtos naturais como o Extrato natural de Aroeira, a Polpa do
+        Açaí, o Enxofre Medicinal e o óleo de menta. Dentre eles estão o
+        Araraoeira e o Arosol S que são comercializados há 19 anos, sendo
+        lançados posteriormente o Intimús e o Açaí.
       </ProductsPages>
       <ProductsCarousel
         produtos={items}
