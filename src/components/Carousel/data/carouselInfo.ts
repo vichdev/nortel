@@ -17,7 +17,7 @@ export const carouselInfo: ICarouselInfo[] = [
   },
   {
     titulo: "Linha Fitoterápica",
-    texto: "Produtos veterinarios de qualidade para seu pet",
+    texto: "Produtos fitoterápicos para sua higiene pessoal.",
     path: "aroeira",
     route: "/produtos/fitoterapicos",
     title: "Saiba mais sobre os produtos fitoterápicos",
