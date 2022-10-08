@@ -2,8 +2,8 @@ import produto1 from "../../../assets/produtos/hoteleiros/hot_1.jpg";
 import produto2 from "../../../assets/produtos/hoteleiros/hot_2.jpg";
 import produto3 from "../../../assets/produtos/hoteleiros/hot_3.jpg";
 import produto4 from "../../../assets/produtos/hoteleiros/hot_4.jpg";
-import produto5 from "../../../assets/produtos/hoteleiros/hot_5.jpeg";
-import produto6 from "../../../assets/produtos/hoteleiros/hot_6.jpeg";
+import produto5 from "../../../assets/produtos/hoteleiros/hot_5.jpg";
+import produto6 from "../../../assets/produtos/hoteleiros/hot_6.jpg";
 
 export interface IProdutosVeterinarios {
   titulo: string;
@@ -38,13 +38,13 @@ const items: Array<IProdutosVeterinarios> = [
     alt: "foto 1",
   },
   {
-    titulo: "Mini sabonete Viva las cores 1",
+    titulo: "Mini sabonete",
     descricao: "Contém no kit Viva Las Cores.",
     foto: `${produto5}`,
     alt: "foto 1",
   },
   {
-    titulo: "Mini sabonete Viva las cores 1",
+    titulo: "Mini sabonete",
     descricao: "Contém no kit Viva Las Cores.",
     foto: `${produto6}`,
     alt: "foto 1",

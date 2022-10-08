@@ -2,7 +2,6 @@ import produto1 from "../../../assets/produtos/veterinarios/vet1.jpg";
 import produto2 from "../../../assets/produtos/veterinarios/vet2.jpg";
 import produto3 from "../../../assets/produtos/veterinarios/vet3.jpg";
 import produto4 from "../../../assets/produtos/veterinarios/vet4.jpg";
-import produto5 from "../../../assets/produtos/veterinarios/vet5.jpg";
 import produto6 from "../../../assets/produtos/veterinarios/vet6.jpg";
 import produto7 from "../../../assets/produtos/veterinarios/vet7.jpg";
 import produto8 from "../../../assets/produtos/veterinarios/vet13.jpg";
@@ -46,12 +45,6 @@ const items: Array<IProdutosVeterinarios> = [
     titulo: "Sabonete TOTÓ filhotes",
     descricao: "Aroma de morango, Anti-pulgas, bacterícida.",
     foto: `${produto4}`,
-    alt: "foto 1",
-  },
-  {
-    titulo: "Sabonete TOTÓ alcatrão",
-    descricao: "Mata bicheiras (Miiases).",
-    foto: `${produto5}`,
     alt: "foto 1",
   },
   {
